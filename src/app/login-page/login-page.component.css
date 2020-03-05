@@ -17,7 +17,7 @@ input{
   margin-left: 38%;
   color: rgb(38, 0, 255);
   background-color: darkgrey;
-  
+  outline: none;
 }
 span{
   color: rgb(69, 10, 233);
@@ -26,4 +26,5 @@ span{
   margin-left: 20%;
   color: rgb(38, 0, 255);
   background-color: darkgrey;
+  outline: none;
 }

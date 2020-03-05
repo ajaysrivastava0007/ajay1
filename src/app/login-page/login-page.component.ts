@@ -20,18 +20,7 @@ export class LoginPageComponent {
   
 ngOnInit(){}
 
-onSubmit()
-{
-  if(this.userProfile.valid)
-  {
-    console.log(this.userProfile.value);
-  }
-  else
-  {
 
-  }
-  
-}
 
   }
 
