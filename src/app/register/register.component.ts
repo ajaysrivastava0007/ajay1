@@ -22,5 +22,4 @@ export class RegisterComponent implements OnInit {
     password: new FormControl('',[Validators.minLength(4), Validators.required, Validators.pattern(
         "^[a-zA-Z0-9!@#\,.<>?$%\^&]{4,15}$")])
   })
-
 }
