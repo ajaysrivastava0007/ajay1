@@ -1,0 +1,27 @@
+<form [formGroup]="userProfile" (ngSubmit)="onSubmit()">
+  <div>
+    <h2><u>Log-In</u></h2>
+    <br>&nbsp;
+  <label>
+    User-Id :
+    &nbsp; <input type="email" formControlName="email" ><br>
+    <span *ngIf="!userProfile.get('email').valid && userProfile.get('email').dirty"><em><u>Please enter valid email</u></em></span>
+  </label>
+  <br><br>
+  <label>
+     Password:
+    <input type ="password" formControlName="password"><br>
+    <span *ngIf="!userProfile.get('password').valid && userProfile.get('password').dirty"> 
+      <em><u>Invalid password<br></u></em></span>
+  </label>
+  <br><br>
+  <ng-template #check></ng-template>
+  <button id="login"type="submit">login</button><br><br>
+  <button id="register" routerLink="/register">New here? Register Now</button>
+ <br><br>
+  </div>
+  <span *ngIf="!userProfile.valid"><ul><em><u>Note:</u></em>
+    <li>No space is allowed </li>
+    <li>Minimum 4 characters needed</li>
+  </ul></span>
+</form>

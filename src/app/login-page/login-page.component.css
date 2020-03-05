@@ -1,0 +1,29 @@
+form{
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-top: 2%;
+}
+h2{
+  text-align: center;
+}
+div{
+  background-color: rgb(192, 223, 213);
+}
+input{
+  border-radius: .8em;
+  outline-style: none;
+}
+#login{
+  margin-left: 38%;
+  color: rgb(38, 0, 255);
+  background-color: darkgrey;
+  
+}
+span{
+  color: rgb(69, 10, 233);
+}
+#register{
+  margin-left: 20%;
+  color: rgb(38, 0, 255);
+  background-color: darkgrey;
+}
