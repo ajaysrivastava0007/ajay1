@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl,FormGroup, Validators} from '@angular/forms';
-
+import { RegisterComponent } from '../register/register.component';
 
 @Component({
   selector: 'app-login-page',
@@ -9,6 +9,7 @@ import {FormControl,FormGroup, Validators} from '@angular/forms';
 })
 export class LoginPageComponent {
   
+   Info =[]; 
   constructor(){}
 
   userProfile = new FormGroup ({
@@ -18,9 +19,14 @@ export class LoginPageComponent {
     "^[a-zA-Z0-9!@#\,.<>?$%\^&]{4,15}$")])
 });
   
-ngOnInit(){}
+ngOnInit(){
+ 
+}
 
+onSubmit()
+{
+  console.log(this.userProfile.value);
+  
+}
 
-
-  }
-
+}

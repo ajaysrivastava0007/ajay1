@@ -25,7 +25,7 @@
         <br><br>
         <label>
             D.O.B :<br>
-            <input type="date" >
+            <input type="date" formControlName="date">
         </label>
         <br><br>
         <label>
@@ -43,12 +43,11 @@
         </label>
         <br><br>
         <label>
-            <button type="submit" routerLink="/login" [disabled]="!userRegistration.valid">Submit</button><br><br>
+            <button routerLink="/login" type="button"  (click)="onSubmit()">Submit</button><br><br>
             <span *ngIf="!userRegistration.valid"><ul><em><u>Note:</u></em>
                 <li>No space is allowed </li>
                 <li>Minimum 4 characters needed</li>
               </ul></span>
         </label>
     </div>
-   
 </form>
