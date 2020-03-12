@@ -2,14 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {  ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { StorageServiceModule } from 'ngx-webstorage-service';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { HttpClient } from '@angular/common/http';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -19,7 +18,9 @@ import { HttpClient } from '@angular/common/http';
     AppComponent,
     LoginPageComponent,
     RegisterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    DashboardComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -28,9 +29,7 @@ import { HttpClient } from '@angular/common/http';
     ReactiveFormsModule,
     AppRoutingModule,
     FormsModule,
-    StorageServiceModule,
-    HttpClient
-  
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

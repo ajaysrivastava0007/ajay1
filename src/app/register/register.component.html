@@ -43,7 +43,7 @@
         </label>
         <br><br>
         <label>
-            <button routerLink="/login" type="button"  (click)="onSubmit()">Submit</button><br><br>
+            <button routerLink="/login" type="button" [disabled]="!userRegistration.valid" (click)="onSubmit()">Submit</button><br><br>
             <span *ngIf="!userRegistration.valid"><ul><em><u>Note:</u></em>
                 <li>No space is allowed </li>
                 <li>Minimum 4 characters needed</li>

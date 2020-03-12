@@ -3,13 +3,15 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { DatabaseService } from '../database.service'
 
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
+ 
+  
   public currentDate = new Date();
 
   constructor( public send : DatabaseService) { }
@@ -28,15 +30,19 @@ export class RegisterComponent implements OnInit {
  
   onSubmit()
   {
-    console.log("sent")
-    email:this.userRegistration.value.email;
-    password: this.userRegistration.value.pass;
-    this.send.signUp(this.userRegistration.value.email, this.userRegistration.value.password);
-  }
+    
+    this.send.signUp(this.userRegistration.value.email);
+    console.log("added")
+  //   email:this.userRegistration.value.email;
+  //   password: this.userRegistration.value.pass;
+  //   this.send.signUp(this.userRegistration.value.email, this.userRegistration.value.password);
+  //   console.log("send")
+  //  }
 
   // dateValidation()
   // {
     
   //  console.log(this.userRegistration.value.date.getFullYear)
   // }
+}
 }

@@ -17,14 +17,30 @@ export class DatabaseService {
 
   constructor(private http: HttpClient) {}
 
-  signUp(email: string, password: string)
+  signUp(email: string)
   {
-    return this.http.post<responseData>(
-      'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[AIzaSyAmqFJnOcMOGuEB2G0POapMkzBE7Nx4zqc]',
-      {
-      email: email,
-      password: password,
-      returnSecureToken: true
-    })
+    localStorage.setItem("key", email);
+    // return this.http.post<responseData>(
+    //   'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDSMsVNyEs8nVqZ3a1TkJfAw8uQvMHWV5Y',
+    //   {
+    //   email: email,
+    //   password: password,
+    //   returnSecureToken: true
+    // })
+  }
+
+  signIn(email: string)
+  {
+
+     localStorage.getItem("key");
+     console.log('got item')
+    // return this.http.post<responseData>(
+    //   'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDSMsVNyEs8nVqZ3a1TkJfAw8uQvMHWV5Y',
+    //   {
+    //      email: email,
+    //   password: password,
+    //   returnSecureToken: true
+    //   }
+    // )
   }
 }
