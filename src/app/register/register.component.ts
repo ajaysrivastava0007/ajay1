@@ -29,7 +29,6 @@ export class RegisterComponent implements OnInit {
     password: new FormControl('',[Validators.minLength(4), Validators.required, Validators.pattern(
         "^[a-zA-Z0-9!@#\,.<>?$%\^&]{4,15}$")])
   })
-<<<<<<< HEAD
  
   onSubmit()
   {
@@ -40,6 +39,4 @@ export class RegisterComponent implements OnInit {
     console.log(localStorage.getItem("email"))
     
 }
-=======
->>>>>>> 54badfbc85f82e46b745d162bd76f4f0411b1b64
 }
