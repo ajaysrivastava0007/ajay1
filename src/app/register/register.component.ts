@@ -1,20 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ThrowStmt } from '@angular/compiler';
 
-import { DatabaseService } from '../database.service'
 
-
+let userInfo=[];
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
+
 export class RegisterComponent implements OnInit {
  
+
   
   public currentDate = new Date();
 
-  constructor( public send : DatabaseService) { }
+  constructor() { }
   
   ngOnInit(): void {}
 
@@ -30,19 +32,11 @@ export class RegisterComponent implements OnInit {
  
   onSubmit()
   {
+    let info = [this.userRegistration.value.email,this.userRegistration.value.password]
+    userInfo.push(info)
+    console.log(userInfo)
+    localStorage.setItem("key",JSON.stringify(userInfo))
+    console.log(localStorage.getItem("email"))
     
-    this.send.signUp(this.userRegistration.value.email);
-    console.log("added")
-  //   email:this.userRegistration.value.email;
-  //   password: this.userRegistration.value.pass;
-  //   this.send.signUp(this.userRegistration.value.email, this.userRegistration.value.password);
-  //   console.log("send")
-  //  }
-
-  // dateValidation()
-  // {
-    
-  //  console.log(this.userRegistration.value.date.getFullYear)
-  // }
 }
 }

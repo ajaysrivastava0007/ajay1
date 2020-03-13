@@ -1,5 +1,5 @@
 
-<form [formGroup]="userProfile" (ngSubmit)="onSubmit()">
+<form [formGroup]="userProfile" >
   <div>
     <h2><u>Log-In</u></h2>
     <br>&nbsp;
@@ -16,7 +16,8 @@
       <em><u>Invalid password<br></u></em></span>
   </label>
   <br><br> 
-  <button id="login" type="submit" routerLink="/dashboard" [disabled]="!userProfile.valid">login</button><br><br>
+  <button id="login" type="button" 
+   [disabled]="!userProfile.valid" (click)="onSubmit()">login</button><br><br>
   <button id="register" routerLink="/register">New here? Register Now</button>
  <br><br>
   </div>

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl,FormGroup, Validators} from '@angular/forms';
-// import { RegisterComponent } from '../register/register.component';
-import { DatabaseService } from '../database.service'
+
 
 @Component({
   selector: 'app-login-page',
@@ -10,8 +9,9 @@ import { DatabaseService } from '../database.service'
 })
 export class LoginPageComponent {
   
-   Info =[]; 
-   constructor( public send : DatabaseService ) { }
+ 
+   
+   constructor() { }
 
   userProfile = new FormGroup ({
   email: new FormControl('', [Validators.required, Validators.email, Validators.pattern(
@@ -21,16 +21,19 @@ export class LoginPageComponent {
 });
   
 ngOnInit(){
- 
+
 }
 
 onSubmit()
 {
-  console.log(this.send.signIn("key"))
-  // email:this.userProfile.value.email;
-  // password: this.userProfile.value.pass;
-  // this.send.signUp(this.userProfile.value.email, this.userProfile.value.password);
-  // console.log()
+   if(this.userProfile.value.email === localStorage.getItem("email" ) && this.userProfile.value.password === localStorage.getItem("email"))
+   {
+     console.log(localStorage.getItem("email"),"logged in")
+     window.location.href="/dashboard"
+
+   }else{
+    alert("not registered")
+   }
 }
 
 }
