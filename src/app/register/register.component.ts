@@ -32,10 +32,10 @@ export class RegisterComponent implements OnInit {
  
   onSubmit()
   {
-    let info = [this.userRegistration.value.email,this.userRegistration.value.password]
+    let info = [this.userRegistration.value.email]
     userInfo.push(info)
     console.log(userInfo)
-    localStorage.setItem("key",JSON.stringify(userInfo))
+    localStorage.setItem("key",this.userRegistration.value.email)
     console.log(localStorage.getItem("email"))
     
 }

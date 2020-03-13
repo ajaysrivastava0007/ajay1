@@ -31,3 +31,34 @@
     margin-left: 5%;
     color: rgb(88, 188, 235);
 }
+.subHeader{
+    background-color: wheat;
+    height: 40%;
+}
+#heading{
+    list-style-type: none; 
+}
+#men{
+    display: inline;
+    margin-left: 10%;
+    cursor: pointer;
+    outline-style: none;
+}
+#women{
+    display: inline;
+    margin-left: 20%;
+    cursor: pointer;
+    outline-style: none;
+}
+#electronics{
+    display: inline;
+    margin-left: 20%;
+    cursor: pointer;
+    outline-style: none;
+}
+#grocery{
+    display: inline;
+    margin-left: 20%;
+    cursor: pointer;
+    outline-style: none;
+}

@@ -26,13 +26,14 @@ ngOnInit(){
 
 onSubmit()
 {
-   if(this.userProfile.value.email === localStorage.getItem("email" ) && this.userProfile.value.password === localStorage.getItem("email"))
+  
+   if(this.userProfile.value.email === localStorage.getItem("key"))
    {
-     console.log(localStorage.getItem("email"),"logged in")
+     console.log(localStorage.getItem("key"),"logged in")
      window.location.href="/dashboard"
 
    }else{
-    alert("not registered")
+    alert("user not registered")
    }
 }
 

@@ -1,0 +1,64 @@
+.header{
+    width: 100%;
+    background-color: rgb(56, 134, 252);
+    height: 10%;
+ }
+ #search{
+     margin-left: 10%;
+     margin-top: 1%;
+     width: 30%;
+     height: 50%;
+ }
+ #loginButton
+ {
+     background-color: white;
+     width: 10%;
+     height: 50%;
+     margin-left: 15%;
+     color: rgb(88, 188, 235);
+ }
+ #dropDown{
+     margin-left: 6%;
+     background-color: white;
+     width: 10%;
+     height: 50%;
+     color: rgb(88, 188, 235);
+ }
+ #cart{
+     background-color: white;
+     width: 10%;
+     height: 50%;
+     margin-left: 5%;
+     color: rgb(88, 188, 235);
+ }
+ .subHeader{
+     background-color: wheat;
+     height: 40%;
+ }
+ #heading{
+     list-style-type: none; 
+ }
+ #men{
+     display: inline;
+     margin-left: 10%;
+     cursor: pointer;
+     outline-style: none;
+ }
+ #women{
+     display: inline;
+     margin-left: 20%;
+     cursor: pointer;
+     outline-style: none;
+ }
+ #electronics{
+     display: inline;
+     margin-left: 20%;
+     cursor: pointer;
+     outline-style: none;
+ }
+ #grocery{
+     display: inline;
+     margin-left: 20%;
+     cursor: pointer;
+     outline-style: none;
+ }
