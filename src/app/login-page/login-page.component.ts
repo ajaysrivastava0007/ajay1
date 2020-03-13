@@ -24,6 +24,7 @@ ngOnInit(){
 
 }
 
+<<<<<<< HEAD
 onSubmit()
 {
    if(this.userProfile.value.email === localStorage.getItem("email" ) && this.userProfile.value.password === localStorage.getItem("email"))
@@ -37,3 +38,7 @@ onSubmit()
 }
 
 }
+=======
+}
+
+>>>>>>> 54badfbc85f82e46b745d162bd76f4f0411b1b64

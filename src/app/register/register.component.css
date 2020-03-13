@@ -3,13 +3,22 @@ form{
     margin-left: 40%;
     margin-right: 40%;
     margin-top: 2%;
+<<<<<<< HEAD
     background-color: rgb(192, 223, 213);
+=======
+    height: 100%;
+     background-color: rgb(192, 223, 213);
+>>>>>>> 54badfbc85f82e46b745d162bd76f4f0411b1b64
   }
  div{
    margin-left: 20%;
  }
+<<<<<<< HEAD
  button{
   color: rgb(38, 0, 255);
   background-color: darkgrey;
   outline: none;
  }
+=======
+  
+>>>>>>> 54badfbc85f82e46b745d162bd76f4f0411b1b64

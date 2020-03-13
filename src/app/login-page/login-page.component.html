@@ -15,9 +15,15 @@
     <span *ngIf="!userProfile.get('password').valid && userProfile.get('password').dirty"> 
       <em><u>Invalid password<br></u></em></span>
   </label>
+<<<<<<< HEAD
   <br><br> 
   <button id="login" type="button" 
    [disabled]="!userProfile.valid" (click)="onSubmit()">login</button><br><br>
+=======
+  <br><br>
+  <ng-template #check></ng-template>
+  <button id="login"type="submit" [disabled]="!userProfile.valid">login</button><br><br>
+>>>>>>> 54badfbc85f82e46b745d162bd76f4f0411b1b64
   <button id="register" routerLink="/register">New here? Register Now</button>
  <br><br>
   </div>
