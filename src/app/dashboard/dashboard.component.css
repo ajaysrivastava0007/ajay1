@@ -4,7 +4,7 @@
    height: 10%;
 }
 #search{
-    margin-left: 10%;
+    margin-left: 5%;
     margin-top: 1%;
     width: 30%;
     height: 50%;
@@ -61,4 +61,26 @@
     margin-left: 20%;
     cursor: pointer;
     outline-style: none;
+}
+.carousel{
+    background: #2f4357;
+    margin-top: 0;
+}
+.carousel-item{
+    text-align: center;
+    min-height: 280px;
+ }
+.deals{
+    width: 100%;
+    background-color: white;
+    height: 50%;
+}
+h1{
+    margin-left: 3%;
+}
+#dealProduct{
+    width: 10%;
+}
+.dealProductButton{
+   margin-left: 20%;
 }

@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import {  ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { NgImageSliderModule } from 'ng-image-slider';
+
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterComponent } from './register/register.component';
@@ -12,6 +14,8 @@ import { MenSectionComponent } from './men-section/men-section.component';
 import { WomenSectionComponent } from './women-section/women-section.component';
 import { ElectronicsSectionComponent } from './electronics-section/electronics-section.component';
 import { GrocerySectionComponent } from './grocery-section/grocery-section.component';
+import { InventoryComponent } from './inventory/inventory.component';
+
 
 
 
@@ -27,6 +31,9 @@ import { GrocerySectionComponent } from './grocery-section/grocery-section.compo
     WomenSectionComponent,
     ElectronicsSectionComponent,
     GrocerySectionComponent,
+    InventoryComponent,
+
+    
     
   ],
   imports: [
@@ -35,6 +42,7 @@ import { GrocerySectionComponent } from './grocery-section/grocery-section.compo
     ReactiveFormsModule,
     AppRoutingModule,
     FormsModule,
+    NgImageSliderModule
     
   ],
   providers: [],

@@ -30,13 +30,18 @@ export class RegisterComponent implements OnInit {
         "^[a-zA-Z0-9!@#\,.<>?$%\^&]{4,15}$")])
   })
  
+  // dateValidate()
+  // { 
+    
+  //   if(( +this.currentDate.getUTCFullYear - this.userRegistration.value.date.getUTCFullYear > 18) )
+  //   {
+  //     console.log(this.currentDate.valueOf() - this.userRegistration.value.date.valueOf() > 18)
+  //   }
+  // }
   onSubmit()
   {
-    let info = [this.userRegistration.value.email]
-    userInfo.push(info)
-    console.log(userInfo)
-    localStorage.setItem("key",this.userRegistration.value.email)
-    console.log(localStorage.getItem("email"))
-    
+    let key  = this.userRegistration.value.email;
+    localStorage.setItem(key,JSON.stringify(this.userRegistration.value))
+    console.log(localStorage)
 }
 }

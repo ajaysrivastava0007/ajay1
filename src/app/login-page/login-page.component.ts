@@ -26,15 +26,22 @@ ngOnInit(){
 
 onSubmit()
 {
-  
-   if(this.userProfile.value.email === localStorage.getItem("key"))
-   {
-     console.log(localStorage.getItem("key"),"logged in")
-     window.location.href="/dashboard"
-
-   }else{
-    alert("user not registered")
-   }
+  for(let value =0; value<localStorage.length;value++)
+  {
+    let key = localStorage.key(value);
+    if(this.userProfile.value.email === key &&
+       this.userProfile.value.password === JSON.parse(localStorage.getItem(key)).password)
+       {
+        console.log(localStorage.getItem(key),"logged in")
+        window.location.href="/dashboard"
+       } 
+       else if (this.userProfile.value.email === "admin@cart.com" && this.userProfile.value.password === "oneofakind")
+       {
+         console.log("logged in to inventory")
+         window.location.href="/inventory"
+       }
+  }
 }
+  
 
 }

@@ -1,6 +1,7 @@
 
 <form [formGroup]="userRegistration" >
     <div>
+        <h2><u>Get Register to Login</u></h2>
         <br>
         <label>
             First Name :<br>
@@ -25,7 +26,9 @@
         <br><br>
         <label>
             D.O.B :<br>
-            <input type="date" formControlName="date">
+            <input type="date" formControlName="date"><br>
+            <span *ngIf="!userRegistration.get('date').valid">
+                <em><u>Please enter valid date</u></em></span>
         </label>
         <br><br>
         <label>
