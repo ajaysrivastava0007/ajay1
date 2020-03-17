@@ -41,6 +41,7 @@ onSubmit()
          window.location.href="/inventory"
        }
   }
+  
 }
   
 

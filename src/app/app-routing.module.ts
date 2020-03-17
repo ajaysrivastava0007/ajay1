@@ -9,7 +9,9 @@ import { MenSectionComponent} from './men-section/men-section.component';
 import { WomenSectionComponent } from './women-section/women-section.component';
 import { ElectronicsSectionComponent } from './electronics-section/electronics-section.component';
 import { GrocerySectionComponent } from './grocery-section/grocery-section.component';
-import { InventoryComponent } from './inventory/inventory.component'
+import { InventoryComponent } from './inventory/inventory.component';
+
+
 
 
 

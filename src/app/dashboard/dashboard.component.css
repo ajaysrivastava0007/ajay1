@@ -1,6 +1,6 @@
 .header{
    width: 100%;
-   background-color: rgb(56, 134, 252);
+   background-color: #2874F0;
    height: 10%;
 }
 #search{
@@ -78,9 +78,38 @@
 h1{
     margin-left: 3%;
 }
-#dealProduct{
-    width: 10%;
+#row{
+    width: 100%;
+    
 }
-.dealProductButton{
-   margin-left: 20%;
-}
+#row {
+    display:table;
+  }
+  #column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+  }
+  #dealButton{
+      color: white;
+      margin-top: 2%;
+      margin-left: 10%;
+      background-color: rgb(36, 31, 44);
+      outline-style: none;
+  }
+  .footer{
+    width: 100%;
+    background-color: #172337;
+    height: 400%;
+  }
+  #about{
+    margin-left: 10%;
+    color: grey;
+    text-align: left;
+    margin-top: 3.5%;
+  }
+  .subAbout{
+      color: honeydew;
+      text-decoration: none;
+      text-align: left;
+  }

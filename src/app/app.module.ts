@@ -20,6 +20,9 @@ import { InventoryComponent } from './inventory/inventory.component';
 
 
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,8 +35,8 @@ import { InventoryComponent } from './inventory/inventory.component';
     ElectronicsSectionComponent,
     GrocerySectionComponent,
     InventoryComponent,
-
     
+      
     
   ],
   imports: [
