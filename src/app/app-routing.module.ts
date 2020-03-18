@@ -10,6 +10,7 @@ import { WomenSectionComponent } from './women-section/women-section.component';
 import { ElectronicsSectionComponent } from './electronics-section/electronics-section.component';
 import { GrocerySectionComponent } from './grocery-section/grocery-section.component';
 import { InventoryComponent } from './inventory/inventory.component';
+import { CartComponent } from './cart/cart.component'
 
 
 
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path: 'login', component: LoginPageComponent}, 
   {path: 'register', component: RegisterComponent},
   {path: 'inventory', component: InventoryComponent},
+  {path: 'cart', component: CartComponent},
   {path: '**', component: PageNotFoundComponent },
   
   

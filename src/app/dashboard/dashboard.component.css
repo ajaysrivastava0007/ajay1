@@ -82,20 +82,24 @@ h1{
     width: 100%;
     
 }
-#row {
-    display:table;
-  }
-  #column {
-    float: left;
-    width: 50%;
-    padding: 5px;
-  }
+#prodImage{
+    margin-left: 8%;
+    width: 13%; 
+    cursor: pointer;
+    border: 0;
+    text-decoration: none;
+    outline-style: none;
+}
   #dealButton{
-      color: white;
-      margin-top: 2%;
-      margin-left: 10%;
-      background-color: rgb(36, 31, 44);
-      outline-style: none;
+    background-color: rgb(250, 244, 244);
+    color: rgb(14, 14, 10);
+    margin-left: -11%;
+    opacity: .3;
+    
+  }
+  #dealButton:hover {
+      opacity: .9;
+    
   }
   .footer{
     width: 100%;

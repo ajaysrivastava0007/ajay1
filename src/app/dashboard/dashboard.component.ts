@@ -1,24 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit } from "@angular/core";
+import { ProductServiceService } from "../../assets/product-service.service";
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: "app-dashboard",
+  templateUrl: "./dashboard.component.html",
+  styleUrls: ["./dashboard.component.css"],
+  providers: [ProductServiceService]
 })
 export class DashboardComponent implements OnInit {
- 
- public product:[
-  {"assets/images/dealShoes.jpg", id:"prod1"},
-  {"assets/images/dealEarphone.jpg", id:"prod2"},  
- ]
-  constructor() { }
-
-  ngOnInit(): void {
+  products: any[] = [];
+  constructor(private service: ProductServiceService) {
+    this.products = this.service.getProducts();
   }
-  
-  
 
-  
+  ngOnInit(): void {}
 
+  addProductToCart() {
+    for (let i = 0; i < this.products.length; i++) {
+      this.service.cartProducts.push(this.products);
+      
+    }
+    console.log("added")
+  }
 }

@@ -86,75 +86,16 @@
     <h1>Deals Of The Day</h1>
     <hr />
   </div>
-  <div id="row">
-    <br /><br /><br />
-    <div id="column">
-      <div id="dealProduct">
-        <img
-          src="assets/images/dealShoes.jpg"
-          style="cursor: pointer; width:35%; border:0; text-decoration:none; outline:none"
-        />
-      </div>
-      <div>
-        <button id="dealButton">Add to Cart</button>
-      </div>
-    </div>
-    <div id="column">
-      <div id="dealProduct">
-        <img
-          src="assets/images/dealEarphone.jpg"
-          style="cursor: pointer;  width:35%; border:0; text-decoration:none; outline:none"
-        />
-      </div>
-      <div>
-        <button id="dealButton">Add to Cart</button>
-      </div>
-    </div>
-    <div id="column">
-      <div id="dealProduct">
-        <img
-          src="assets/images/dealGlove.jpg"
-          style="cursor: pointer;  width:35%; border:0; text-decoration:none; outline:none"
-        />
-      </div>
-      <div>
-        <button id="dealButton">Add to Cart</button>
-      </div>
-    </div>
-    <div id="column">
-      <div id="dealProduct">
-        <img
-          src="assets/images/dealJacket.jpg"
-          style="cursor: pointer;  width:35%; border:0; text-decoration:none; outline:none"
-        />
-      </div>
-      <div>
-        <button id="dealButton">Add to Cart</button>
-      </div>
-    </div>
-    <div id="column">
-      <div id="dealProduct">
-        <img
-          src="assets/images/dealWatch.jpg"
-          style="cursor: pointer;  width:35%; border:0; text-decoration:none; outline:none"
-        />
-      </div>
-      <div>
-        <button id="dealButton">Add to Cart</button>
-      </div>
-    </div>
-    <div id="column">
-      <div id="dealProduct">
-        <img
-          src="assets/images/dealTshirt.jpg"
-          style="cursor: pointer;  width:35%; border:0; text-decoration:none; outline:none"
-        />
-      </div>
-      <div>
-        <button id="dealButton">Add to Cart</button>
-      </div>
-    </div>
-  </div>
+  <span *ngIf="products">
+    <span *ngFor="let prod of products">
+      <span>
+        <img src="{{ prod.image }}" id="prodImage" style="width: 15.5%;" />
+        <button id="dealButton" (click)="addProductToCart()">
+          Add To Cart
+        </button></span
+      >
+    </span>
+  </span>
   <hr />
   <div class="footer">
     <label id="about">

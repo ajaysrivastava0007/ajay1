@@ -1,0 +1,28 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "assets/images/dealShoes.jpg"
+    },
+    {
+      "id": 1,
+      "name": "assets/images/dealEarphone.jpg"
+    },
+    {
+      "id": 1,
+      "name": "assets/images/dealGlove.jpg"
+    },
+    {
+      "id": 1,
+      "name": "assets/images/dealJacket.jpg"
+    },
+    {
+      "id": 1,
+      "name": "assets/images/dealWatch.jpg"
+    },
+    {
+      "id": 1,
+      "name": "assets/images/dealTshirt.jpg"
+    }
+  ]
+}

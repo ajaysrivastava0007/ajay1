@@ -8,6 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
+    
   },
   "private": true,
   "dependencies": {
@@ -52,4 +53,5 @@
     "tslint": "~5.18.0",
     "typescript": "~3.7.5"
   }
+  
 }
