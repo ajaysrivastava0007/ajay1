@@ -1,29 +1,63 @@
-
-<form [formGroup]="userProfile" >
-  <div>
-    <h2><u>Log-In</u></h2>
-    <br>&nbsp;
-  <label>
-    User-Id :
-    &nbsp; <input type="email" formControlName="email" ><br>
-    <span *ngIf="!userProfile.get('email').valid && userProfile.get('email').dirty"><em><u>Please enter valid email</u></em></span>
-  </label>
-  <br><br>
-  <label>
-     Password:
-    <input type ="password" formControlName="password"><br>
-    <span *ngIf="!userProfile.get('password').valid && userProfile.get('password').dirty"> 
-      <em><u>Invalid password<br></u></em></span>
-  </label>
-  <br><br> 
-  <button id="login" type="button" 
-   [disabled]="!userProfile.valid"(click)="onSubmit()">login</button><br><br>
-  <button id="register" routerLink="/register">New here? Register Now</button>
- <br><br>
+<div class="header">
+  <img
+    src="assets/images/myCart.jfif"
+    routerLink="/dashboard"
+    style="width: 3%; margin-left: 2%; cursor: pointer;"
+  />
+  <input
+    id="search"
+    type="search"
+    placeholder="Search for products, brands and more"
+  />
+  <div class="regsiterPage">
+    <form [formGroup]="userProfile">
+      <div>
+        <h2><u><i>Log-In</i></u></h2>
+        <br />&nbsp;
+        <label>
+          User-Id : &nbsp; <input type="email" formControlName="email" /><br />
+          <span
+            *ngIf="
+              !userProfile.get('email').valid && userProfile.get('email').dirty
+            "
+            ><em><u>Please enter valid email</u></em></span
+          >
+        </label>
+        <br /><br />
+        <label>
+          Password:
+          <input type="password" formControlName="password" /><br />
+          <span
+            *ngIf="
+              !userProfile.get('password').valid &&
+              userProfile.get('password').dirty
+            "
+          >
+            <em
+              ><u>Invalid password<br /></u></em
+          ></span>
+        </label>
+        <br /><br />
+        <button
+          id="login"
+          type="button"
+          [disabled]="!userProfile.valid"
+          (click)="onSubmit()"
+        >
+          login</button
+        ><br /><br />
+        <button id="register" routerLink="/register">
+          New here? Register Now
+        </button>
+        <br /><br />
+      </div>
+      <span  *ngIf="!userProfile.valid"
+        ><ul id="caution">
+          <em><u>Note:</u></em>
+          <li>No space is allowed</li>
+          <li>Minimum 4 characters needed</li>
+        </ul></span
+      >
+    </form>
   </div>
-  <span *ngIf="!userProfile.valid"><ul><em><u>Note:</u></em>
-    <li>No space is allowed </li>
-    <li>Minimum 4 characters needed</li>
-  </ul></span>
-</form>
-
+</div>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ProductServiceService } from "../../assets/product-service.service";
+import { addToCartService } from "../../assets/addToCart.service";
+import { Model } from "../model";
 
 @Component({
   selector: "app-dashboard",
@@ -8,18 +10,15 @@ import { ProductServiceService } from "../../assets/product-service.service";
   providers: [ProductServiceService]
 })
 export class DashboardComponent implements OnInit {
-  products: any[] = [];
-  constructor(private service: ProductServiceService) {
-    this.products = this.service.getProducts();
+  products: Model[] = [];
+  constructor(
+    private productService: ProductServiceService,
+    private cartService: addToCartService
+  ) {}
+
+  ngOnInit(): void {
+    this.products = this.productService.getProducts();
   }
 
-  ngOnInit(): void {}
-
-  addProductToCart() {
-    for (let i = 0; i < this.products.length; i++) {
-      this.service.cartProducts.push(this.products);
-      
-    }
-    console.log("added")
-  }
+  
 }

@@ -16,6 +16,9 @@ import { ElectronicsSectionComponent } from './electronics-section/electronics-s
 import { GrocerySectionComponent } from './grocery-section/grocery-section.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { CartComponent } from './cart/cart.component';
+import { ProductItemComponent } from './dashboard/product-item/product-item.component';
+import { CartItemComponent } from './cart/cart-item/cart-item.component';
+
 
 
 
@@ -37,6 +40,9 @@ import { CartComponent } from './cart/cart.component';
     GrocerySectionComponent,
     InventoryComponent,
     CartComponent,
+    ProductItemComponent,
+    CartItemComponent,
+    
     
       
     
