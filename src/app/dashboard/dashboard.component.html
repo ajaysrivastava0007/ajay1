@@ -1,24 +1,19 @@
 <div class="header">
-  <img
-    src="assets/images/myCart.jfif"
-    routerLink="/dashboard"
-    style="width: 3%; margin-left: 2%; cursor: pointer;"
-  />
-  <input
-    id="search"
-    type="search"
-    placeholder="Search for products, brands and more"
-  />
-  <span>
-    <input type="submit" value="Login" id="loginButton" routerLink="/login" />
+  <img src="assets/images/myCart.jfif" routerLink="/dashboard" style="width: 3%; margin-left: 2%; cursor: pointer;" />
+  <input id="search" type="search" placeholder="Search for products, brands and more" />
+  <span *ngIf="login.loginStatus===0" (click)="loginButton()">
+    <input type="submit" value="Login" id="loginButton" />
   </span>
+  <span *ngIf="login.loginStatus === 1" (click)="logoutButton()">
+    <input type="submit" value="Logout" id="logoutButton" />
+  </span>
+
   <span>
     <select id="dropDown">
       <option>user Profile</option>
       <option value=" logout">logout</option>
     </select>
-    <input id="cart" type="button" value="Cart" routerLink="/cart" /> </span
-  ><br /><br />
+    <input id="cart" type="button" value="Cart" routerLink="/cart" /> </span><br /><br />
   <div class="subHeader">
     <ul id="heading">
       <li routerLink="/men" id="men">Men</li>
@@ -27,7 +22,7 @@
       <li routerLink="/grocery" id="grocery">Grocery</li>
     </ul>
   </div>
-
+         
   <div class="bs-example">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Carousel indicators -->
@@ -36,40 +31,35 @@
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
         <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+
       </ol>
       <!-- Wrapper for carousel items -->
-      <div class="carousel-inner">
+      <div class="carousel-inner" role="listbox" >
         <div class="carousel-item active">
-          <img
-            src="assets/images/clothes.jpg"
-            alt="First Slide"
-            style="width: 35%; cursor: pointer; border:0; text-decoration:none; outline:none"
-            routerLink="#"
-          />
+          <img src="assets/images/offers1.jpg" alt="First Slide"
+            style="width: 19%; cursor: pointer; border:0; text-decoration:none; outline:none" routerLink="#" />
         </div>
         <div class="carousel-item ">
-          <img
-            src="assets/images/womenClothes.jfif"
-            alt="second Slide"
-            style="width: 35%; cursor: pointer; border:0; text-decoration:none; outline:none"
-            routerLink="#"
-          />
+          <img src="assets/images/offers.jpg" alt="Second Slide"
+            style="width: 19%; cursor: pointer; border:0; text-decoration:none; outline:none" routerLink="#" />
         </div>
         <div class="carousel-item ">
-          <img
-            src="assets/images/phones.jfif"
-            alt="third Slide"
-            style="width: 35%; cursor: pointer; border:0; text-decoration:none; outline:none"
-            routerLink="#"
-          />
+          <img src="assets/images/clothes.jpg" alt="Third Slide"
+            style="width: 35%; cursor: pointer; border:0; text-decoration:none; outline:none" routerLink="#" />
         </div>
         <div class="carousel-item ">
-          <img
-            src="assets/images/grocery.jfif"
-            alt="fourth Slide"
-            style="width: 35%; cursor: pointer; border:0; text-decoration:none; outline:none"
-            routerLink="#"
-          />
+          <img src="assets/images/womenClothes.jfif" alt="Third Slide"
+            style="width: 35%; cursor: pointer; border:0; text-decoration:none; outline:none" routerLink="#" />
+        </div>
+        <div class="carousel-item ">
+          <img src="assets/images/phones.jfif" alt="Fourth Slide"
+            style="width: 35%; cursor: pointer; border:0; text-decoration:none; outline:none" routerLink="#" />
+        </div>
+        <div class="carousel-item ">
+          <img src="assets/images/grocery.jfif" alt="Fifth Slide"
+            style="width: 35%; cursor: pointer; border:0; text-decoration:none; outline:none" routerLink="#" />
         </div>
       </div>
       <!-- Carousel controls -->
@@ -90,10 +80,9 @@
     <span *ngFor="let prod of products">
       <span>
         <img src="{{ prod.image }}" id="prodImage" style="width: 15.5%;" />
-        <button id="dealButton" >
+        <button id="dealButton">
           Add To Cart
-        </button></span
-      >
+        </button></span>
     </span>
   </span>
   <hr />
@@ -109,8 +98,7 @@
       HELP<br /><br />
       <a routerLink="#" class="subAbout">Payments</a><br /><br /><br />
       <a routerLink="#" class="subAbout">Shipping</a><br /><br /><br />
-      <a routerLink="#" class="subAbout">Cancellation or Returns</a
-      ><br /><br /><br />
+      <a routerLink="#" class="subAbout">Cancellation or Returns</a><br /><br /><br />
       <a routerLink="#" class="subAbout">FAQ</a>
     </label>
     <label id="about">

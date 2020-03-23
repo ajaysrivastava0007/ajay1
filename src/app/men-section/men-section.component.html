@@ -1,23 +1,32 @@
-
 <div class="header">
-    <img src="assets/images/myCart.jfif"  routerLink ="/dashboard" style="width: 3%; margin-left: 2%; cursor: pointer;">
+    <img src="assets/images/myCart.jfif" routerLink="/dashboard" style="width: 3%; margin-left: 2%; cursor: pointer;">
     <input id="search" type="search" placeholder="Search for products, brands and more">
     <span>
-        <input type="submit" value="Login" id="loginButton"  routerLink="/login">
+        <input type="submit" value="Login" id="loginButton" routerLink="/login">
     </span>
-    <span >
+    <span>
         <select id="dropDown">
-            <option >user Profile</option>
+            <option>user Profile</option>
             <option value=" logout">logout</option>
         </select>
         <input id="cart" type="button" value="Cart" routerLink="/cart">
-     </span><br><br>
-     <div class="subHeader">
-         <ul id ="heading">
-             <li routerLink ="/men"  id="men">Men</li>
-             <li routerLink ="/women"  id="women">Women</li>
-             <li routerLink ="/electronics" id="electronics">Electronics</li>
-             <li routerLink ="/grocery" id="grocery">Grocery</li>
-         </ul>
-     </div>
+    </span><br><br>
+    <div class="subHeader">
+        <ul id="heading">
+            <li routerLink="/men" id="men">Men</li>
+            <li routerLink="/women" id="women">Women</li>
+            <li routerLink="/electronics" id="electronics">Electronics</li>
+            <li routerLink="/grocery" id="grocery">Grocery</li>
+        </ul>
+    </div>
+    <span *ngIf="mensList">
+        <span *ngFor="let product of mensList">
+            <ul >
+                <li id="productList">
+                    <img src="{{product.image}}" id="mensImage"><br><br>
+                    <button>Add To Cart</button>
+                </li>
+            </ul>
+        </span>
+    </span>
 </div>

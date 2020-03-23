@@ -1,7 +1,7 @@
 .header{
     width: 100%;
     background-color: rgb(56, 134, 252);
-    height: 10%;
+    height: 12%;
  }
  #search{
      margin-left: 5%;
@@ -62,3 +62,16 @@
      cursor: pointer;
      outline-style: none;
  }
+ #mensImage{
+     width: 13.5%;
+     margin-top: 2%;
+ }
+  button{
+      margin-left: 3%;
+  }
+  #productList{
+   display: inline;
+   overflow: hidden;
+  }
+
+  

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MensProductService } from '../../assets/mens-product.service'
+import { Model } from '../model';
 
 @Component({
   selector: 'app-men-section',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenSectionComponent implements OnInit {
 
-  constructor() { }
+mensList: Model[]=[]
+
+  constructor(private mens: MensProductService) { }
 
   ngOnInit(): void {
+    this.mensList = this.mens.getMensProduct();
   }
 
 }
