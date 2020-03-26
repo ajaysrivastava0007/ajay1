@@ -22,7 +22,7 @@
       <li routerLink="/grocery" id="grocery">Grocery</li>
     </ul>
   </div>
-         
+
   <div class="bs-example">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Carousel indicators -->
@@ -33,10 +33,9 @@
         <li data-target="#myCarousel" data-slide-to="3"></li>
         <li data-target="#myCarousel" data-slide-to="4"></li>
         <li data-target="#myCarousel" data-slide-to="5"></li>
-
       </ol>
       <!-- Wrapper for carousel items -->
-      <div class="carousel-inner" role="listbox" >
+      <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
           <img src="assets/images/offers1.jpg" alt="First Slide"
             style="width: 19%; cursor: pointer; border:0; text-decoration:none; outline:none" routerLink="#" />
@@ -75,18 +74,22 @@
   <div class="deals">
     <h1>Deals Of The Day</h1>
     <hr />
-  </div>
+  </div><br><br><br>
   <span *ngIf="products">
     <span *ngFor="let prod of products">
-      <span>
-        <img src="{{ prod.image }}" id="prodImage" style="width: 15.5%;" />
-        <button id="dealButton">
-          Add To Cart
-        </button></span>
+      <tr>
+        <th id="productList">
+          <img src="{{ prod.image }}" id="prodImage" style="width: 70.5%;" /><br><br>
+          <button id="dealButton">
+            Add To Cart
+          </button>
+        </th>
+      </tr>
     </span>
-  </span>
-  <hr />
-  <div class="footer">
+  </span> 
+</div>
+<hr /> 
+   <div class="footer">
     <label id="about">
       ABOUT<br /><br />
       <a routerLink="#" class="subAbout">Contact Us</a><br /><br /><br />
@@ -115,5 +118,4 @@
       <a routerLink="#" class="subAbout">Youtube</a><br /><br /><br />
       <a routerLink="#" class="subAbout">Instagram</a>
     </label>
-  </div>
-</div>
+  </div> 

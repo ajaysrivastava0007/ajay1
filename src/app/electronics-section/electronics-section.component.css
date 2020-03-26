@@ -62,3 +62,16 @@
      cursor: pointer;
      outline-style: none;
  }
+ #productList{
+    list-style-type: none ;
+ float: left;
+ 
+}
+#electronicsImage
+{
+    width: 35%;
+    margin-top: 2%;
+}
+button{
+    margin-left: 8%;
+}

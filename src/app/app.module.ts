@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {  ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { NgImageSliderModule } from 'ng-image-slider';
@@ -16,15 +16,6 @@ import { ElectronicsSectionComponent } from './electronics-section/electronics-s
 import { GrocerySectionComponent } from './grocery-section/grocery-section.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { CartComponent } from './cart/cart.component';
-import { ProductItemComponent } from './dashboard/product-item/product-item.component';
-import { CartItemComponent } from './cart/cart-item/cart-item.component';
-
-
-
-
-
-
-
 
 
 @NgModule({
@@ -40,12 +31,9 @@ import { CartItemComponent } from './cart/cart-item/cart-item.component';
     GrocerySectionComponent,
     InventoryComponent,
     CartComponent,
-    ProductItemComponent,
-    CartItemComponent,
     
     
-      
-    
+
   ],
   imports: [
     BrowserModule,
@@ -54,7 +42,7 @@ import { CartItemComponent } from './cart/cart-item/cart-item.component';
     AppRoutingModule,
     FormsModule,
     NgImageSliderModule
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

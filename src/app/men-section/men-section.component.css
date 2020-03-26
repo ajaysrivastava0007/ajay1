@@ -63,15 +63,15 @@
      outline-style: none;
  }
  #mensImage{
-     width: 13.5%;
+     width: 30.5%;
      margin-top: 2%;
  }
   button{
-      margin-left: 3%;
+      margin-left: 5%;
   }
   #productList{
-   display: inline;
-   overflow: hidden;
+      list-style-type: none ;
+   float: left;
   }
 
   

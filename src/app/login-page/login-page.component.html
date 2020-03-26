@@ -9,7 +9,7 @@
     type="search"
     placeholder="Search for products, brands and more"
   />
-  <div class="regsiterPage">
+  <div class="registerPage">
     <form [formGroup]="userProfile">
       <div>
         <h2><u><i>Log-In</i></u></h2>
@@ -38,14 +38,14 @@
           ></span>
         </label>
         <br /><br />
-        <button
+        <span ><button 
           id="login"
           type="button"
           [disabled]="!userProfile.valid"
           (click)="onLogin()"
         >
           login</button
-        ><br /><br />
+        ></span><br /><br />
         <button id="register" routerLink="/register">
           New here? Register Now
         </button>

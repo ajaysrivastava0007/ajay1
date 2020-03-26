@@ -17,4 +17,9 @@ mensList: Model[]=[]
     this.mensList = this.mens.getMensProduct();
   }
 
+  addToCart()
+  {
+    this.mens.sendMessage(this.mensList);
+  }
+
 }

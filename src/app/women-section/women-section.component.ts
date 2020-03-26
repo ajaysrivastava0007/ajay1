@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Model } from '../model';
+import { WomensSectionService } from 'src/assets/womens-product.service';
 
 @Component({
   selector: 'app-women-section',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WomenSectionComponent implements OnInit {
 
-  constructor() { }
+  womensList: Model[]=[]
+  constructor(private womens: WomensSectionService) { }
 
   ngOnInit(): void {
+    this.womensList = this.womens.getWomensProduct();
   }
 
 }

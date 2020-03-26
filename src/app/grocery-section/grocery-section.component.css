@@ -62,3 +62,14 @@
      cursor: pointer;
      outline-style: none;
  }
+ #productList{
+    list-style-type: none ;
+ float: left;
+}
+#groceryImage{
+    width: 35.5%;
+     margin-top: 2%;
+}
+button{
+    margin-left: 7%;
+}

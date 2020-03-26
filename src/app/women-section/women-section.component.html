@@ -20,4 +20,16 @@
              <li routerLink ="/grocery" id="grocery">Grocery</li>
          </ul>
      </div>
+     <span *ngIf="womensList">
+         <span *ngFor="let product of womensList">
+             <ul>
+                 <li id="productList" >
+                     <img src="{{product.image}}" id="womensImage"><br>
+                     <p style="margin-left: 12%; color: tomato; height: 5%;"><b><u>{{product.name}}</u></b></p><br>
+                     <button>Add To Cart</button>
+                 </li>
+
+             </ul>
+         </span>
+     </span>
 </div>

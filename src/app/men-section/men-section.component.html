@@ -23,8 +23,9 @@
         <span *ngFor="let product of mensList">
             <ul >
                 <li id="productList">
-                    <img src="{{product.image}}" id="mensImage"><br><br>
-                    <button>Add To Cart</button>
+                    <img src="{{product.image}}" id="mensImage"><br>
+                    <p style="margin-left: 12%; color: tomato; height: 5%;"><b><u>{{product.name}}</u></b></p><br>
+                    <button (click)="addToCart()">Add To Cart</button>
                 </li>
             </ul>
         </span>

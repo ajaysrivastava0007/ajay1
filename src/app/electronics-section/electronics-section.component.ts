@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Model } from '../model';
+import { ElectronicsSectionService } from 'src/assets/electronics-product.service';
 
 @Component({
   selector: 'app-electronics-section',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ElectronicsSectionComponent implements OnInit {
 
-  constructor() { }
+  electronicsList:Model[]=[]
+  constructor(private electronics: ElectronicsSectionService) { }
 
   ngOnInit(): void {
+    this.electronicsList = this.electronics.getProductList()
   }
 
 }
