@@ -51,7 +51,7 @@ export class LoginService {
         window.location.href = "/inventory";
         // this.setLoginStatus(0);
       } else {
-        alert("user not permitted or invalid credentials");
+        console.log("user not permitted or invalid credentials");
         
       }
     }
