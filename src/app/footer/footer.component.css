@@ -1,0 +1,18 @@
+ 
+  .footer{
+    width: 100%;
+    background-color: #172337;
+    height: 45%;
+    margin-top: 0%;
+  }
+  #about{
+    margin-left: 10%;
+    color: grey;
+    text-align: left;
+    margin-top: 3.5%;
+  }
+  .subAbout{
+      color: honeydew;
+      text-decoration: none;
+      text-align: left;
+  }

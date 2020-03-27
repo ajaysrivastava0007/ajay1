@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { MensProductService } from '../../assets/mens-product.service'
 import { Subscription } from 'rxjs'
 import { Model } from '../model';
+import { addToCartService } from 'src/assets/addToCart.service';
+import { ProtractorExpectedConditions } from 'protractor';
+import { ProductServiceService } from '../../assets/product-service.service'
 
 @Component({
   selector: 'app-cart',
@@ -9,16 +12,17 @@ import { Model } from '../model';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  mensProduct: Model[] = []
+  dashboardProduct: number[] = []
   // product: any;
   subscription: Subscription
-  constructor(private mensProductService: MensProductService) {
-    this.subscription = this.mensProductService.getMessage().subscribe((product) => {
-      // for (let i = 0; i < this.mensProductService.mensProductList.length; i++) {
-      this.mensProduct.push(product)
-      console.log(product)
+  constructor(private dashBoardSerive: addToCartService,
+    private productService: ProductServiceService) {
+    this.subscription = this.dashBoardSerive.getItem().subscribe(() => {
+ for(let i=0;i<this.productService.cartProducts.length;i++) {
+      this.dashboardProduct.push(i)
+      console.log(i)
 
-      // }
+       }
     })
   }
 

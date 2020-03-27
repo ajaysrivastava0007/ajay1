@@ -16,6 +16,8 @@ import { ElectronicsSectionComponent } from './electronics-section/electronics-s
 import { GrocerySectionComponent } from './grocery-section/grocery-section.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { CartComponent } from './cart/cart.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -31,6 +33,8 @@ import { CartComponent } from './cart/cart.component';
     GrocerySectionComponent,
     InventoryComponent,
     CartComponent,
+    FooterComponent,
+    HeaderComponent,
     
     
 

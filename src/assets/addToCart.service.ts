@@ -6,7 +6,7 @@ import { Subject } from "rxjs";
 })
 export class addToCartService {
   subject = new Subject();
-  constructor() {}
+  constructor( ) {}
 
   sendItem(product) {
     

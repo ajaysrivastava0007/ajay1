@@ -21,13 +21,13 @@
     </div>
     <span *ngIf="mensList">
         <span *ngFor="let product of mensList">
-            <ul >
-                <li id="productList">
+            <tr >
+                <th id="productList">
                     <img src="{{product.image}}" id="mensImage"><br>
-                    <p style="margin-left: 12%; color: tomato; height: 5%;"><b><u>{{product.name}}</u></b></p><br>
-                    <button (click)="addToCart()">Add To Cart</button>
-                </li>
-            </ul>
+                    <p style="margin-left: 19%; color: tomato; height: 5%;"><b><u>{{product.name}}</u></b></p><br>
+                    <button id="dealButton" (click)="addToCart()">Add To Cart</button>
+                </th>
+            </tr>
         </span>
     </span>
 </div>

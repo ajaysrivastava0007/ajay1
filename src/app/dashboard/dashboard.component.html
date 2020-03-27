@@ -1,121 +1,65 @@
-<div class="header">
-  <img src="assets/images/myCart.jfif" routerLink="/dashboard" style="width: 3%; margin-left: 2%; cursor: pointer;" />
-  <input id="search" type="search" placeholder="Search for products, brands and more" />
-  <span *ngIf="login.loginStatus===0" (click)="loginButton()">
-    <input type="submit" value="Login" id="loginButton" />
-  </span>
-  <span *ngIf="login.loginStatus === 1" (click)="logoutButton()">
-    <input type="submit" value="Logout" id="logoutButton" />
-  </span>
+<app-header></app-header>
+<div class="bs-example">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Carousel indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
 
-  <span>
-    <select id="dropDown">
-      <option>user Profile</option>
-      <option value=" logout">logout</option>
-    </select>
-    <input id="cart" type="button" value="Cart" routerLink="/cart" /> </span><br /><br />
-  <div class="subHeader">
-    <ul id="heading">
-      <li routerLink="/men" id="men">Men</li>
-      <li routerLink="/women" id="women">Women</li>
-      <li routerLink="/electronics" id="electronics">Electronics</li>
-      <li routerLink="/grocery" id="grocery">Grocery</li>
-    </ul>
-  </div>
-
-  <div class="bs-example">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Carousel indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        <li data-target="#myCarousel" data-slide-to="4"></li>
-        <li data-target="#myCarousel" data-slide-to="5"></li>
-      </ol>
-      <!-- Wrapper for carousel items -->
-      <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active">
-          <img src="assets/images/offers1.jpg" alt="First Slide"
-            style="width: 19%; cursor: pointer; border:0; text-decoration:none; outline:none" routerLink="#" />
-        </div>
-        <div class="carousel-item ">
-          <img src="assets/images/offers.jpg" alt="Second Slide"
-            style="width: 19%; cursor: pointer; border:0; text-decoration:none; outline:none" routerLink="#" />
-        </div>
-        <div class="carousel-item ">
-          <img src="assets/images/clothes.jpg" alt="Third Slide"
-            style="width: 35%; cursor: pointer; border:0; text-decoration:none; outline:none" routerLink="#" />
-        </div>
-        <div class="carousel-item ">
-          <img src="assets/images/womenClothes.jfif" alt="Third Slide"
-            style="width: 35%; cursor: pointer; border:0; text-decoration:none; outline:none" routerLink="#" />
-        </div>
-        <div class="carousel-item ">
-          <img src="assets/images/phones.jfif" alt="Fourth Slide"
-            style="width: 35%; cursor: pointer; border:0; text-decoration:none; outline:none" routerLink="#" />
-        </div>
-        <div class="carousel-item ">
-          <img src="assets/images/grocery.jfif" alt="Fifth Slide"
-            style="width: 35%; cursor: pointer; border:0; text-decoration:none; outline:none" routerLink="#" />
-        </div>
+    </ol>
+    <!-- Wrapper for carousel items -->
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <img src="assets/images/clothes.jpg" alt="Third Slide"
+          style="width: 100%; height: 60vh; cursor: pointer; border:0; text-decoration:none; outline:none"
+          routerLink="#" />
       </div>
-      <!-- Carousel controls -->
-      <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </a>
-      <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </a>
+      <div class="carousel-item ">
+        <img src="assets/images/womenClothes.jfif" alt="Third Slide"
+          style="width: 100%; height: 60vh; cursor: pointer; border:0; text-decoration:none; outline:none"
+          routerLink="#" />
+      </div>
+      <div class="carousel-item ">
+        <img src="assets/images/phones.jfif" alt="Fourth Slide"
+          style="width: 100%; height: 60vh; cursor: pointer; border:0; text-decoration:none; outline:none"
+          routerLink="#" />
+      </div>
+      <div class="carousel-item ">
+        <img src="assets/images/grocery.jfif" alt="Fifth Slide"
+          style="width: 100%; height: 60vh; cursor: pointer; border:0; text-decoration:none; outline:none"
+          routerLink="#" />
+      </div>
     </div>
+    <!-- Carousel controls -->
+    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>  
   </div>
-  <br />
-  <div class="deals">
-    <h1>Deals Of The Day</h1>
-    <hr />
-  </div><br><br><br>
-  <span *ngIf="products">
-    <span *ngFor="let prod of products">
-      <tr>
-        <th id="productList">
-          <img src="{{ prod.image }}" id="prodImage" style="width: 70.5%;" /><br><br>
-          <button id="dealButton">
+</div>
+<br />
+<div class="deals">
+  <h1>Deals Of The Day</h1>
+  <hr />
+</div><br><br><br>
+<span *ngIf="products">
+  <span *ngFor="let prod of products">
+    <tr>
+      <th id="productList">
+        
+          <img src="{{ prod.image }}" id="prodImage" /><br><br>
+          <p style="margin-left: 42%; color: tomato; height: 5%;"><b><u>{{prod.name}}</u></b></p><br>
+          <button id="dealButton" (click)="sendItemToCart()">
             Add To Cart
           </button>
-        </th>
-      </tr>
-    </span>
-  </span> 
-</div>
-
-   <div class="footer">
-    <label id="about">
-      ABOUT<br /><br />
-      <a routerLink="#" class="subAbout">Contact Us</a><br /><br /><br />
-      <a routerLink="#" class="subAbout">About Us</a><br /><br /><br />
-      <a routerLink="#" class="subAbout">Carrers </a><br /><br /><br />
-      <a routerLink="#" class="subAbout">Press</a>
-    </label>
-    <label id="about">
-      HELP<br /><br />
-      <a routerLink="#" class="subAbout">Payments</a><br /><br /><br />
-      <a routerLink="#" class="subAbout">Shipping</a><br /><br /><br />
-      <a routerLink="#" class="subAbout">Cancellation or Returns</a><br /><br /><br />
-      <a routerLink="#" class="subAbout">FAQ</a>
-    </label>
-    <label id="about">
-      POLICY<br /><br />
-      <a routerLink="#" class="subAbout">Return Policy</a><br /><br /><br />
-      <a routerLink="#" class="subAbout">Terms of Use</a><br /><br /><br />
-      <a routerLink="#" class="subAbout">Security </a><br /><br /><br />
-      <a routerLink="#" class="subAbout">Privacy</a>
-    </label>
-    <label id="about">
-      SOCIAL<br /><br />
-      <a routerLink="#" class="subAbout">Facebook</a><br /><br /><br />
-      <a routerLink="#" class="subAbout">Twitter</a><br /><br /><br />
-      <a routerLink="#" class="subAbout">Youtube</a><br /><br /><br />
-      <a routerLink="#" class="subAbout">Instagram</a>
-    </label>
-  </div> 
+      </th>
+    </tr>
+  </span>
+</span>
+<br><br>
+<hr>
+<app-footer></app-footer>

@@ -15,22 +15,19 @@ export class DashboardComponent implements OnInit {
   constructor(
     private productService: ProductServiceService,
     private cartService: addToCartService,
-    public login: LoginService
+
   ) { }
 
   ngOnInit(): void {
     this.products = this.productService.getProducts();
   }
 
-  loginButton() {
 
-    window.location.href = "/login"
-    this.login.setLoginStatus(1)
 
-  }
+  sendItemToCart() {
 
-  logoutButton() {
-    this.login.setLoginStatus(0);
-
+    for (let i = 0; i < this.products.length; i++) {
+      this.cartService.sendItem(i);
+    }
   }
 }
