@@ -2,23 +2,19 @@
     <img src="assets/images/myCart.jfif" routerLink="/dashboard" style="width: 3%; margin-left: 2%; cursor: pointer;" />
     <input id="search" type="search" placeholder="Search for products, brands and more" />
     <span *ngIf="login.loginStatus===0" (click)="loginButton()">
-        <input type="submit" value="Login" id="loginButton" />
+        <input type="submit" class="btn" value="Login" id="loginButton" />
     </span>
     <span *ngIf="login.loginStatus === 1" (click)="logoutButton()">
-        <input type="submit" value="Logout" id="logoutButton" />
+        <input type="submit" class="btn" value="Logout" id="logoutButton" />
     </span>
-
-    <span>
-        <select id="dropDown">
-            <option>user Profile</option>
-            <option value=" logout">logout</option>
-        </select>
-        <input id="cart" type="button" value="Cart" routerLink="/cart" /> </span><br /><br />
-    <div class="subHeader">
-        <ul id="heading">
-            <li routerLink="/men" id="men">Men</li>
-            <li routerLink="/women" id="women">Women</li>
-            <li routerLink="/electronics" id="electronics">Electronics</li>
-            <li routerLink="/grocery" id="grocery">Grocery</li>
-        </ul>
+    <button type="button"id="dropdown" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        More
+    </button>
+    <div class="dropdown-menu" >
+        <a class="dropdown-item" href="#">Notification preferences</a><hr>
+        <a class="dropdown-item" href="#">Sell on MyCart</a><hr>
+        <a class="dropdown-item" href="#">24x7 Customer support</a><hr>
     </div>
+    <input id="cart" type="button" class="btn" value="Cart" routerLink="/cart" /> <br /><br />
+    
+    

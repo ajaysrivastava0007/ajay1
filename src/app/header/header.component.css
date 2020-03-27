@@ -8,6 +8,7 @@
      margin-top: 1%;
      width: 30%;
      height: 50%;
+     
  }
  #loginButton
  {
@@ -25,13 +26,11 @@
      margin-left: 15%;
      color: rgb(88, 188, 235);
  }
- #dropDown{
-     margin-left: 6%;
-     background-color: white;
-     width: 10%;
-     height: 50%;
-     color: rgb(88, 188, 235);
- }
+#dropdown{
+    margin-left: 6%;
+    background-color:  #2874F0;
+    outline-style: none;
+}
  #cart{
      background-color: white;
      width: 10%;
@@ -40,8 +39,7 @@
      color: rgb(88, 188, 235);
  }
  .subHeader{
-     background-color: wheat;
-     height: 50%;
+    margin-left: 20%;
  }
  #heading{
      list-style-type: none; 
