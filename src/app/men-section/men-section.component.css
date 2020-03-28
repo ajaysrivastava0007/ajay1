@@ -38,30 +38,6 @@
  #heading{
      list-style-type: none; 
  }
- #men{
-     display: inline;
-     margin-left: 10%;
-     cursor: pointer;
-     outline-style: none;
- }
- #women{
-     display: inline;
-     margin-left: 20%;
-     cursor: pointer;
-     outline-style: none;
- }
- #electronics{
-     display: inline;
-     margin-left: 20%;
-     cursor: pointer;
-     outline-style: none;
- }
- #grocery{
-     display: inline;
-     margin-left: 20%;
-     cursor: pointer;
-     outline-style: none;
- }
  #mensImage{
      height: 40%;
      width: 30.5%;
@@ -70,15 +46,21 @@
      background-color: rgb(131, 11, 11);
  }
   button{
-    background-color: rgb(250, 244, 244);
-    color: rgb(14, 14, 10);
-    margin-left: 13%;
+    /* background-color: rgb(250, 244, 244); */
+    /* color: rgb(14, 14, 10); */
+    margin-left: 35%;
     outline-style: none;
     margin-top: 2%;
   }
   #productList{
-      list-style-type: none ;
-   float: left;
+    margin-left: 20%;  
+   margin-top: 5%;
+   background-color: rgb(205, 202, 207);
+  }
+  #product-name{
+    margin-left: 29%;
+    font-weight: 5%;
+    color: #4f5253;
   }
 
   

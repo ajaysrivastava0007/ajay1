@@ -1,12 +1,17 @@
 <app-header></app-header>
-    <span *ngIf="mensList">
-        <span *ngFor="let product of mensList">
-            <tr >
-                <th id="productList">
-                    <img src="{{product.image}}" id="mensImage"><br>
-                    <p style="margin-left: 19%; color: tomato; height: 5%;"><b><u>{{product.name}}</u></b></p><br>
-                    <button id="dealButton" (click)="addToCart()">Add To Cart</button>
-                </th>
-            </tr>
-        </span>
+<span *ngIf="mensList">
+    <span *ngFor="let prod of mensList">
+        <tr>
+            <th>
+                <div class="card" id="productList">
+                    <img class="card-img-top" src="{{prod.image}}" alt="Card image">
+                    <div class="card-body">
+                        <h4 id="product-name" class="card-title"><b><u>{{prod.name}}</u></b></h4>
+                    </div>
+                </div><br>
+                <button class="btn btn-primary" class="btn btn-outline-primary"> Add To Cart
+                </button><br><br><br><br>
+            </th>
+        </tr>
     </span>
+</span>

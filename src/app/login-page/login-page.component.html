@@ -1,63 +1,40 @@
 <div class="header">
-  <img
-    src="assets/images/myCart.jfif"
-    routerLink="/dashboard"
-    style="width: 3%; margin-left: 2%; cursor: pointer;"
-  />
-  <input
-    id="search"
-    type="search"
-    placeholder="Search for products, brands and more"
-  />
+  <img src="assets/images/myCart.jfif" routerLink="/dashboard" style="width: 3%; margin-left: 2%; cursor: pointer;" />
+  <input id="search" type="search" placeholder="Search for products, brands and more" />
   <div class="registerPage">
     <form [formGroup]="userProfile">
       <div>
         <h2><u><i>Log-In</i></u></h2>
         <br />&nbsp;
         <label>
-          User-Id : &nbsp; <input type="email" formControlName="email" /><br />
-          <span
-            *ngIf="
-              !userProfile.get('email').valid && userProfile.get('email').dirty
-            "
-            ><em><u>Please enter valid email</u></em></span
-          >
+          User-Id :<br><br> <input class="form-control" style="outline-style: none;" type="email"
+            formControlName="email" /><br />
+          <span *ngIf="!userProfile.get('email').valid && userProfile.get('email').dirty"><em><u>Please enter valid
+                email</u></em></span>
         </label>
-        <br /><br />
+        <br /><br />&nbsp;
         <label>
-          Password:
-          <input type="password" formControlName="password" /><br />
-          <span
-            *ngIf="
-              !userProfile.get('password').valid &&
-              userProfile.get('password').dirty
-            "
-          >
-            <em
-              ><u>Invalid password<br /></u></em
-          ></span>
+          Password:<br><br>
+          <input class="form-control" type="password" formControlName="password" /><br />
+          <span *ngIf="!userProfile.get('password').valid && userProfile.get('password').dirty ">
+            <em><u>Invalid password<br /></u></em></span>
         </label>
         <br /><br />
-        <span ><button 
-          id="login"
-          type="button"
-          [disabled]="!userProfile.valid"
-          (click)="onLogin()"
-        >
-          login</button
-        ></span><br /><br />
-        <button id="register" routerLink="/register">
-          New here? Register Now
+        <span><button id="login" class="btn btn-primary" type="button" [disabled]="!userProfile.valid"
+            (click)="onLogin()">
+            signIn</button></span><br /><br />
+        <button id="register" class="btn btn-primary" routerLink="/register" type="button">
+          signUp
         </button>
         <br /><br />
       </div>
-      <span  *ngIf="!userProfile.valid"
-        ><ul id="caution">
+      <span *ngIf="!userProfile.valid">
+        <ul id="caution">
           <em><u>Note:</u></em>
           <li>No space is allowed</li>
           <li>Minimum 4 characters needed</li>
-        </ul></span
-      >
+        </ul>
+      </span>
     </form>
   </div>
 </div>

@@ -1,14 +1,6 @@
 <div class="header">
-  <img
-    src="assets/images/myCart.jfif"
-    routerLink="/dashboard"
-    style="width: 3%; margin-left: 2%; cursor: pointer;"
-  />
-  <input
-    id="search"
-    type="search"
-    placeholder="Search for products, brands and more"
-  />
+  <img src="assets/images/myCart.jfif" routerLink="/dashboard" style="width: 3%; margin-left: 2%; cursor: pointer;" />
+  <input id="search" type="search" placeholder="Search for products, brands and more" />
 
   <div class="registerPage">
     <form [formGroup]="userRegistration">
@@ -19,54 +11,42 @@
         <br />
         <label>
           First Name :<br />
-          <input type="text" formControlName="firstName" /><br />
-          <span
-            *ngIf="
+          <input type="text" id="signupForm" class="form-control" formControlName="firstName" /><br />
+          <span *ngIf="
               !userRegistration.get('firstName').valid &&
               userRegistration.get('firstName').dirty
-            "
-          >
-            <em><u>Please enter valid first name</u></em></span
-          >
+            ">
+            <em><u>Please enter valid first name</u></em></span>
         </label>
         <br /><br />
         <label>
           Last Name :<br />
-          <input type="text" formControlName="lastName" /><br />
-          <span
-            *ngIf="
+          <input type="text" class="form-control" formControlName="lastName" /><br />
+          <span *ngIf="
               !userRegistration.get('lastName').valid &&
               userRegistration.get('lastName').dirty
-            "
-          >
-            <em><u>Please enter valid last name</u></em></span
-          >
+            ">
+            <em><u>Please enter valid last name</u></em></span>
         </label>
         <br /><br />
         <label>
           Email :<br />
-          <input type="text" formControlName="email" /><br />
-          <span
-            *ngIf="
+          <input type="text" class="form-control" formControlName="email" /><br />
+          <span *ngIf="
               !userRegistration.get('email').valid &&
               userRegistration.get('email').dirty
-            "
-          >
-            <em><u>Please enter valid email</u></em></span
-          >
+            ">
+            <em><u>Please enter valid email</u></em></span>
         </label>
         <br /><br />
         <label>
           D.O.B :<br />
-          <input type="date" formControlName="date" /><br />
-          <span
-            *ngIf="
+          <input type="date" class="form-control datepicker" formControlName="date" /><br />
+          <span *ngIf="
               !userRegistration.get('date').valid &&
               userRegistration.get('date').touched
-            "
-          >
-            <em><u>Please enter valid date</u></em></span
-          >
+            ">
+            <em><u>Please enter valid date</u></em></span>
         </label>
         <br /><br />
         <label>
@@ -78,33 +58,25 @@
         <br /><br />
         <label>
           Password :<br />
-          <input type="password" formControlName="password" /><br />
-          <span
-            *ngIf="
+          <input type="password" class="form-control" formControlName="password" /><br />
+          <span *ngIf="
               !userRegistration.get('password').valid &&
               userRegistration.get('password').dirty
-            "
-          >
-            <em><u>Please enter valid password</u></em></span
-          >
+            ">
+            <em><u>Please enter valid password</u></em></span>
         </label>
         <br /><br />
         <label>
-          <button
-            routerLink="/login"
-            type="button"
-            [disabled]="!userRegistration.valid"
-            (click)="onSubmit()"
-          >
-            Submit</button
-          ><br /><br />
-          <span *ngIf="!userRegistration.valid"
-            ><ul>
+          <button class="btn btn-primary" routerLink="/login" type="button" [disabled]="!userRegistration.valid"
+            (click)="onSubmit()">
+            Submit</button><br /><br />
+          <span *ngIf="!userRegistration.valid">
+            <ul>
               <em><u>Note:</u></em>
               <li>No space is allowed</li>
               <li>Minimum 4 characters needed</li>
-            </ul></span
-          >
+            </ul>
+          </span>
         </label>
       </div>
     </form>
