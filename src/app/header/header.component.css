@@ -1,19 +1,21 @@
 .header{
     width: 100%;
     background-color: #2874F0;
-    height: 12%;
+    height: 10%;
  }
  #search{
      margin-left: 5%;
      margin-top: 1%;
      width: 30%;
      height: 50%;
+     border-radius: 0.8em;
+     outline-style: none;
  }
  #loginButton
  {
      background-color: white;
      width: 10%;
-     height: 40%;
+     height: 45%;
      margin-left: 15%;
      color: rgb(88, 188, 235);
  }
@@ -21,12 +23,13 @@
  {
      background-color: white;
      width: 10%;
-     height: 40%;
+     height: 45%;
      margin-left: 15%;
      color: rgb(88, 188, 235);
  }
 #dropdown{
     margin-left: 6%;
+    color: white;
     background-color:  #2874F0;
     outline-style: none;
     width: 10%;

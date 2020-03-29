@@ -14,7 +14,7 @@
     <li class="nav-item" id="grocery">
       <a class="nav-link" routerLink="/grocery">Grocery</a>
     </li>
-  </ul>
+  </ul><hr>
 </nav>
 <div class="bs-example">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -69,6 +69,7 @@
           <img class="card-img-top" src="{{prod.image}}" alt="Card image">
           <div class="card-body">
             <h4 id="product-name" class="card-title"><b><u>{{prod.name}}</u></b></h4>
+            <h4 id="product-name" class="card-title"><b><u>{{prod.price}}</u></b></h4>
           </div>
         </div><br>
         <button id="dealButton" class="btn btn-primary" class="btn btn-outline-primary" (click)="sendItemToCart()">
