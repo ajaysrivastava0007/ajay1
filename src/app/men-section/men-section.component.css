@@ -62,5 +62,17 @@
     font-weight: 5%;
     color: #4f5253;
   }
-
+  #men
+  {
+    margin-left: 100%;
+  }
+  #women{
+    margin-left: 85%;
+  }
+  #electronics{
+    margin-left: 85%;
+  }
+  #grocery{
+    margin-left: 85%;
+  }
   

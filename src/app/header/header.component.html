@@ -7,14 +7,16 @@
     <span *ngIf="login.loginStatus === 1" (click)="logoutButton()">
         <input type="submit" class="btn" value="Logout" id="logoutButton" />
     </span>
-    <button type="button" id="dropdown" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+    <button  id="dropdown"  class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
         More
     </button>
-    <div class="dropdown-menu" >
-        <a class="dropdown-item" href="#">Notification preferences</a><hr>
-        <a class="dropdown-item" href="#">Sell on MyCart</a><hr>
-        <a class="dropdown-item" href="#">24x7 Customer support</a><hr>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Notification preferences</a>
+        <hr>
+        <a class="dropdown-item" href="#">Sell on MyCart</a>
+        <hr>
+        <a class="dropdown-item" href="#">24x7 Customer support</a>
+        <hr>
     </div>
-    <input id="cart" type="button" class="btn" value="Cart" routerLink="/cart" /> 
-    
-    
+    <button id="cart" class="btn" routerLink="/cart"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;Cart</button>
+    </div>

@@ -11,6 +11,9 @@ export class ElectronicsSectionService {
     new Model(1,'I-phone', 'assets/images/electronicsIphones.jpg'),
     new Model(2,'Laptop', 'assets/images/electronicsLaptop.jpg'),
     new Model(3,'Television', 'assets/images/electronicsTv.jpg'),
+    new Model(4,'Trimmer', 'assets/images/electronicsTrimmer.jpg'),
+    new Model(3,'Hair-Dryer', 'assets/images/electronicsHair-Dryer.jpg'),
+    new Model(3,'Ear-Phones', 'assets/images/dealEarphone.jpg'),
   ]
 
   getProductList()

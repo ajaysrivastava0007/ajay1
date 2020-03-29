@@ -20,7 +20,7 @@ import { CartComponent } from './cart/cart.component'
 
 const routes: Routes = [
   {path:'', redirectTo:'dashboard', pathMatch:'full'},
-  {path: 'dashboard', component: DashboardComponent},
+  {path: 'dashboard', component: DashboardComponent,},
   {path: "men", component: MenSectionComponent},
   {path: "women", component: WomenSectionComponent},
   {path: "electronics", component: ElectronicsSectionComponent},

@@ -8,13 +8,12 @@
      margin-top: 1%;
      width: 30%;
      height: 50%;
-     
  }
  #loginButton
  {
      background-color: white;
      width: 10%;
-     height: 50%;
+     height: 40%;
      margin-left: 15%;
      color: rgb(88, 188, 235);
  }
@@ -22,7 +21,7 @@
  {
      background-color: white;
      width: 10%;
-     height: 50%;
+     height: 40%;
      margin-left: 15%;
      color: rgb(88, 188, 235);
  }
@@ -31,14 +30,14 @@
     background-color:  #2874F0;
     outline-style: none;
     width: 10%;
-    height: 50%;
+    height: 40%;
 }
  #cart{
-     background-color: white;
+     background-color: #2874F0;
      width: 10%;
      height: 50%;
      margin-left: 5%;
-     color: rgb(88, 188, 235);
+     color: rgb(254, 255, 255);
  }
  .subHeader{
     margin-left: 20% ;
@@ -46,28 +45,5 @@
  #heading{
      list-style-type: none; 
  }
- #men{
-     display: inline;
-     margin-left: 10%;
-     cursor: pointer;
-     outline-style: none;
- }
- #women{
-     display: inline;
-     margin-left: 20%;
-     cursor: pointer;
-     outline-style: none;
- }
- #electronics{
-     display: inline;
-     margin-left: 20%;
-     cursor: pointer;
-     outline-style: none;
- }
- #grocery{
-     display: inline;
-     margin-left: 20%;
-     cursor: pointer;
-     outline-style: none;
- }
+
  

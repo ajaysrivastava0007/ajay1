@@ -1,34 +1,33 @@
-
-<div class="header">
-    <img src="assets/images/myCart.jfif"  routerLink ="/dashboard" style="width: 3%; margin-left: 2%; cursor: pointer;">
-    <input id="search" type="search" placeholder="Search for products, brands and more">
-    <span>
-        <input type="submit" value="Login" id="loginButton"  routerLink="/login">
+<app-header></app-header>
+<nav class="navbar navbar-expand-sm  ">
+    <ul class="navbar-nav">
+      <li class="nav-item"  id="men">
+        <a class="nav-link"  routerLink="/men">Men</a>
+      </li>
+      <li class="nav-item" id="women">
+        <a class="nav-link" routerLink="/women">Women</a>
+      </li>
+      <li class="nav-item" id="electronics">
+        <a class="nav-link" routerLink="/electronics">Electronics</a>
+      </li>
+      <li class="nav-item" id="grocery">
+        <a class="nav-link" routerLink="/grocery">Grocery</a>
+      </li>
+    </ul>
+  </nav><hr>
+<span *ngIf="groceryList">
+    <span *ngFor="let prod of groceryList">
+        <tr>
+            <th>
+                <div class="card" id="productList">
+                    <img class="card-img-top" src="{{prod.image}}" alt="Card image">
+                    <div class="card-body">
+                        <h4 id="product-name" class="card-title"><b><u>{{prod.name}}</u></b></h4>
+                    </div>
+                </div><br>
+                <button class="btn btn-primary" class="btn btn-outline-primary"> Add To Cart
+                </button><br><br><br><br>
+            </th>
+        </tr>
     </span>
-    <span >
-        <select id="dropDown">
-            <option >user Profile</option>
-            <option value=" logout">logout</option>
-        </select>
-        <input id="cart" type="button" value="Cart" routerLink="/cart">
-     </span><br><br>
-     <div class="subHeader">
-         <ul id ="heading">
-             <li routerLink ="/men"  id="men">Men</li>
-             <li routerLink ="/women"  id="women">Women</li>
-             <li routerLink ="/electronics" id="electronics">Electronics</li>
-             <li routerLink ="/grocery" id="grocery">Grocery</li>
-         </ul>
-     </div>
-     <span *ngIf="groceryList">
-         <span *ngFor="let product of groceryList">
-             <ul>
-                 <li id="productList">
-                     <img src="{{product.image}}" id="groceryImage"><br>
-                     <p style="margin-left: 12%; color: tomato; height: 5%;"><b><u>{{product.name}}</u></b></p><br>
-                     <button>Add To Cart</button>
-                 </li>
-             </ul>
-         </span>
-     </span>
-</div>
+</span>
