@@ -8,7 +8,7 @@ import { Model } from "../app/model";
 export class ProductServiceService {
   constructor() {}
 
-  productList: Model[] = [
+ private productList: Model[] = [
     new Model(1, "Shoes", "assets/images/dealShoes.jpg", "600 $"),
     new Model(2, "Earphone", "assets/images/dealEarphone.jpg", "400 $"),
     new Model(3, "Gloves", "assets/images/dealGlove.jpg", "500 $"),
@@ -21,10 +21,16 @@ export class ProductServiceService {
     new Model(10, "Sandel", "assets/images/dealLadiesFootwear.jpg", "450 $"),
     new Model(11, "Sunglass", "assets/images/dealSunglass.jfif", "150 $"),
     new Model(12, "Brown-bread", "assets/images/dealBread.jfif", "15 $"),
-  ];
+    new Model(13, "Denim-Jacket", "assets/images/dealDenimJacket.jpg", "450 $"),
+    new Model(14, "Kurti", "assets/images/dealKurti.jpg", "250 $"),
+    new Model(15, "Ruck Sack", "assets/images/dealRuckSack.jpg", "400 $"),
+    new Model(16, "Sweater", "assets/images/dealSweater.jpg", "300 $"),
+    new Model(17, "Sneaker", "assets/images/dealSneakers.jpg", "800 $"),
+    new Model(18, "Formal Shoes", "assets/images/dealFormalShoes.jpg", "300 $"),
+  ]
 
   cartProducts: Model[] = [];
   getProducts(){
-    return this.productList
+    return this.productList.slice()
   }
 }
