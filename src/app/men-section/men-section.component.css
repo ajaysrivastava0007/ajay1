@@ -58,7 +58,7 @@
    background-color: rgb(205, 202, 207);
   }
   #product-name{
-    margin-left: 29%;
+    text-align: center;
     font-weight: 5%;
     color: #4f5253;
   }
@@ -74,5 +74,9 @@
   }
   #grocery{
     margin-left: 85%;
+  }
+  h2{
+    text-align: center;
+    color:rgb(3, 75, 110);
   }
   

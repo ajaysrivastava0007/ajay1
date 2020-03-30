@@ -12,12 +12,12 @@ import { ProductServiceService } from '../../assets/product-service.service'
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  dashboardProduct: number[] = []
+  dashboardProduct: Model[] = []
   // product: any;
   subscription: Subscription
-  constructor(private dashBoardSerive: addToCartService,
+  constructor(private dashBoardService: addToCartService,
     private productService: ProductServiceService) {
-    this.subscription = this.dashBoardSerive.getItem().subscribe(() => {
+    this.subscription = this.dashBoardService.getItem().subscribe((dashboardProduct) => {
  for(let i=0;i<this.productService.cartProducts.length;i++) {
       this.dashboardProduct.push(i)
       console.log(i)
@@ -27,7 +27,7 @@ export class CartComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    
   }
 
 }

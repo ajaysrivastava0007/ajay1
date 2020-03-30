@@ -1,35 +1,40 @@
 <app-header></app-header>
 <nav class="navbar navbar-expand-sm  ">
-    <ul class="navbar-nav">
-      <li class="nav-item" id="men">
-        <a class="nav-link"  routerLink="/men">Men</a>
-      </li>
-      <li class="nav-item" id="women">
-        <a class="nav-link" routerLink="/women">Women</a>
-      </li>
-      <li class="nav-item" id="electronics">
-        <a class="nav-link" routerLink="/electronics">Electronics</a>
-      </li>
-      <li class="nav-item" id="grocery">
-        <a class="nav-link" routerLink="/grocery">Grocery</a>
-      </li>
-    </ul>
-  </nav><hr>
-<span *ngIf="mensList">
+  <ul class="navbar-nav">
+    <li class="nav-item" id="men">
+      <a class="nav-link" routerLink="/men">Men</a>
+    </li>
+    <li class="nav-item" id="women">
+      <a class="nav-link" routerLink="/women">Women</a>
+    </li>
+    <li class="nav-item" id="electronics">
+      <a class="nav-link" routerLink="/electronics">Electronics</a>
+    </li>
+    <li class="nav-item" id="grocery">
+      <a class="nav-link" routerLink="/grocery">Grocery</a>
+    </li>
+  </ul>
+</nav>
+<hr>
+<h2>Mens</h2>
+<hr>
+<div class="container">
+  <span *ngIf="mensList">
     <span *ngFor="let prod of mensList">
-        <tr>
-            <th>
-                <div class="card" id="productList">
-                    <img class="card-img-top" src="{{prod.image}}" alt="Card image">
-                    <div class="card-body">
-                        <h4 id="product-name" class="card-title"><b><u>{{prod.name}}</u></b></h4>
-                        <h4 id="product-name" class="card-title"><b><u>{{prod.price}}</u></b></h4>
-                    </div>
-                </div><br>
-                <button class="btn btn-primary" class="btn btn-outline-primary"> Add To Cart
-                </button><br><br><br><br>
-            </th>
-        </tr>
+      <tr>
+        <th>
+          <div class="card" id="productList">
+            <img class="card-img-top" src="{{prod.image}}" alt="Card image">
+            <div class="card-body">
+              <h4 id="product-name" class="card-title"><b><u>{{prod.name}}</u></b></h4>
+              <h4 id="product-name" class="card-title"><b><u>{{prod.price}}</u></b></h4>
+            </div>
+          </div><br>
+          <button class="btn btn-primary" class="btn btn-outline-primary"> Add To Cart
+          </button><br><br><br><br>
+        </th>
+      </tr>
     </span>
-</span>
+  </span>
+</div>
 <app-footer></app-footer>
