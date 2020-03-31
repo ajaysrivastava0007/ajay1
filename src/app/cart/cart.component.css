@@ -5,3 +5,20 @@ h1{
     height: 4.5%;
     /* border:1px solid  */
 }
+#addedProducts{
+    list-style-type: none;
+}
+#productList{
+   width: 70%;
+}
+#productName{
+    text-align: center;
+}
+.card{
+    height: 17%;
+    width: 25%;
+    float: right;
+    margin-right: 20%;
+   font-size: large;
+   padding: 1%;   
+}

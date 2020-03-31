@@ -12,6 +12,7 @@ import { LoginService } from '../../assets/login.service'
 })
 export class DashboardComponent implements OnInit {
   products: Model[] = [];
+  clicked = true;
   constructor(
     private productService: ProductServiceService,
     private cartService: addToCartService,
@@ -22,12 +23,8 @@ export class DashboardComponent implements OnInit {
     this.products = this.productService.getProducts();
   }
 
-
-
-  sendItemToCart() {
-
-    for (let i = 0; i < this.products.length; i++) {
-      this.cartService.sendItem(i);
-    }
+  sendItemToCart(id: number) {
+    this.cartService.addHomePageItems(id);
   }
+
 }

@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Model } from '../app/model'
 import { Subject, Observable } from 'rxjs';
+import { threadId } from 'worker_threads';
+import { ThrowStmt } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MensProductService {
 
-  private Subject = new Subject<Model>();
+ mensList: Model[]=[];
   constructor() { }
 
   mensProductList: Model[]=[
@@ -24,11 +26,10 @@ export class MensProductService {
     return this.mensProductList;
   }
 
-  sendMessage(model: Model[]=[])
-  {
-    this.Subject.next();
+  
+    getSelectedItems(): Model[] {
+      return this.mensList;
   }
-  getMessage(): Observable<Model> {
-    return this.Subject.asObservable();
-}
+
+
 }

@@ -8,7 +8,7 @@ import { Model } from "../app/model";
 export class ProductServiceService {
   constructor() {}
 
- private productList: Model[] = [
+  productList: Model[] = [
     new Model(1, "Shoes", "assets/images/dealShoes.jpg", "60 $"),
     new Model(2, "Earphone", "assets/images/dealEarphone.jpg", "40 $"),
     new Model(3, "Gloves", "assets/images/dealGlove.jpg", "50 $"),

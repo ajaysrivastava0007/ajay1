@@ -13,21 +13,27 @@ import { ProductServiceService } from '../../assets/product-service.service'
 })
 export class CartComponent implements OnInit {
   dashboardProduct: Model[] = []
-  // product: any;
-  subscription: Subscription
-  constructor(private dashBoardService: addToCartService,
-    private productService: ProductServiceService) {
-    this.subscription = this.dashBoardService.getItem().subscribe((dashboardProduct) => {
- for(let i=0;i<this.productService.cartProducts.length;i++) {
-      this.dashboardProduct.push(i)
-      console.log(i)
-
-       }
-    })
+  mensProductInCart: Model[] = []
+  constructor(private cartService: addToCartService,
+    private mensProduct: MensProductService) { }
+  getItemsForCart(): void {
+    this.dashboardProduct = this.cartService.getSelectedItems()
+    // this.getMensForCart()
+    this.mensProductInCart = this.cartService.getMensSelectedItems();
   }
-
+  // getMensForCart(){;
+  //   this.mensProductInCart = this.cartService.getMensSelectedItems();
+  // }
   ngOnInit(): void {
-    
+    this.getItemsForCart();
+
+  }
+  removeItemFromCart(id: number): void {
+    this.cartService.removeHomePageItems(id);
+    this.removeMensItem(id);
+  }
+  removeMensItem(id: number): void {
+    this.cartService.removeMensItems(id)
   }
 
 }

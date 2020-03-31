@@ -1,9 +1,38 @@
 <h1>Cart</h1>
 <span *ngIf="dashboardProduct">
-    <span *ngFor="let prod of dashboardProduct">
-        <ul>
-            <li> {{prod.id}}</li>
-        </ul>
+    <span class="card">
+       <p>Price Details</p> 
+        <hr>
+        <p>Total Amount</p>
+    </span>
 
+    <span *ngFor="let prod of dashboardProduct">
+
+        <ul id="addedProducts">
+            <tr>
+                <th>
+                    <div class="container">
+                        <div class="card" id="productList">
+                            <img class="card-img-top" src="{{prod.image}}" alt="Card image">
+                            <div class="card-body">
+                                <h4 id="product-name" class="card-title"><b><u>{{prod.name}}</u></b></h4>
+                                <h4 id="product-name" class="card-title"><b><u>{{prod.price}}</u></b></h4>
+
+                                <button id="dealButton" class="btn btn-success" class="btn btn-outline-success"
+                                    (click)="removeItemFromCart(prod.id)">
+                                    save for Later
+                                </button>
+
+                                <button id="dealButton" class="btn btn-danger" class="btn btn-outline-danger"
+                                    (click)="removeItemFromCart(prod.id)">
+                                    remove
+                                </button>
+
+                            </div>
+                        </div><br><br><br><br><br><br>
+                    </div>
+                </th>
+            </tr>
+        </ul>
     </span>
 </span>
