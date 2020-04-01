@@ -9,16 +9,36 @@ h1{
     list-style-type: none;
 }
 #productList{
-   width: 70%;
+   width: 50%;
 }
 #productName{
     text-align: center;
 }
-.card{
-    height: 17%;
+#card{
+    height: 19%;
     width: 25%;
     float: right;
     margin-right: 20%;
    font-size: large;
    padding: 1%;   
+}
+#removeButton{
+    margin-top: 5%;
+    text-align: center;
+}
+#placeOrderButton{
+    float: left;
+    margin-top: 5%;
+}
+h4{
+    text-align: center;
+    color: rgb(3, 75, 110);
+    margin-top: 10%;
+}
+.card{
+    width: 25%;
+    height: 20%;
+}
+.alert {
+    margin-left: 20%;
 }
