@@ -2,29 +2,29 @@
 <div class="container">
     <div *ngIf="productDescription">
         <div *ngFor="let prod of productDescription">
-    <div class="card" >
-        <span>
-            <h4 id="product-name" class="card-title">{{prod.name}}</h4>
-        </span>
-        <span>
-            <img class="card-img-top" class="descriptionImage" src="{{prod.image}}" alt="Card image">
-        </span>
-       
-        <div>
-           
-            <span>
-                <h4 id="product-price" class="card-title"><b><u>{{prod.price | currency:'INR'}}</u></b></h4>
-            </span>
+            <div class="card">
+                <span>
+                    <h4 id="product-name" class="card-title">{{prod.name}}</h4>
+                </span>
+                <span>
+                    <img class="card-img-top" class="descriptionImage" src="{{prod.image}}" alt="Card image">
+                </span>
+
+                <div>
+
+                    <span>
+                        <h4 id="product-price" class="card-title"><b><u>{{prod.price | currency:'INR'}}</u></b></h4>
+                    </span>
+                </div>
+
+
+            </div>
         </div>
-          
-       
-    </div>
-</div>
-    <!-- <div *ngIf="productDescription">
+        <!-- <div *ngIf="productDescription">
         <div *ngFor="let prod of productDescription">
             <div class="productImages">
                 <img src="{{prod.image}}" id="productImages">
             </div>
         </div>
     </div> -->
-</div>
+    </div>

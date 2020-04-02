@@ -12,12 +12,10 @@ export class ProductDescriptionComponent implements OnInit {
   productDescription : Model[]=[]
   constructor(private cartService: addToCartService) { }
 
-  getItemsForCart(): void {
-    this.productDescription = this.cartService.getSelectedItems()
-    }
+ 
 
   ngOnInit(): void {
-    this.getItemsForCart();
+    this.productDescription = this.cartService.getSelectedItems()
   }
  
 }

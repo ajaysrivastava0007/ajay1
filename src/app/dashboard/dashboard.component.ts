@@ -29,7 +29,7 @@ export class DashboardComponent implements OnInit {
 
   sendItemToDescriptionPage(){
     this.cartService.getSelectedItems()
-    window.location.href = "/description";
+    // window.location.href = "/description";
     
   }
 }
