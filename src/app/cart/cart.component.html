@@ -1,47 +1,37 @@
+<app-header></app-header>
 <h1>Cart</h1>
 <span *ngIf="dashboardProduct.length === 0" class="alert" class="alert alert-info">Your Cart is Empty</span>
 <span *ngIf="dashboardProduct">
-
     <span class="card" id="card">
         <p>Price Details</p>
         <hr>
-        Total Amount  &nbsp;&nbsp;  {{cartTotal | currency:'INR' }}
-       
+        Total Amount &nbsp;&nbsp; {{cartTotal | currency:'INR' }}
     </span>
-
     <span *ngFor="let prod of dashboardProduct">
-
-        <ul id="addedProducts">
-            <tr>
-                <th>
-                    <div class="container">
-                        <div class="card" id="productList">
-                            <h4>Order#{{prod.name}}#{{prod.category}}</h4>
-                            <hr>
-                            <img class="card-img-top" src="{{prod.image}}" alt="Card image">
-                            <div class="card-body">
-                                <h4 id="productName" class="card-title"><b><u>{{prod.name}}</u></b></h4>
-                                <h4 id="productName" class="card-title"><b><u>{{prod.price| currency:'INR'}}</u></b>
-                                </h4>
-                               
-                                <button class="btn btn-success" class="btn btn-outline-success"
-                                    (click)="removeItemFromCart(prod.id)">
-                                    <span>save for Later</span>
-                                </button>
-                                <button id="removeButton" class="btn btn-danger" class="btn btn-outline-danger"
-                                    (click)="removeItemFromCart(prod.id)">
-                                    remove
-                                </button>
-                                <button id="placeOrderButton" class="btn btn-primary" class="btn btn-outline-primary">
-                                    Place Order
-                                </button>
-                                
-                            </div>
-                        </div><br><br><br>
-                    </div>
-                </th>
-            </tr>
-        </ul>
+        <div class="productList">
+            <h4 id="orderHeader">Order#{{prod.id}}#{{prod.name}}</h4>
+            <hr>
+            <div>
+                <p class="OrderName"> {{prod.name}}</p>
+            </div>
+            <div>
+                <ul>
+                    <li id="productImage"><img src="{{prod.image}}" class="image"></li>
+                    <li id="productPrice">
+                        <p id="price">{{prod.price | currency:"INR"}}</p>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li id="saveList"> <a class="save" (click)=removeItemFromCart(prod.id)><b>Save for later</b></a>
+                    </li>
+                    <li id="removeList"> <a class="remove" (click)=removeItemFromCart(prod.id)><b>Remove</b></a></li>
+                </ul>
+            </div>
+            <hr>
+            <button  class="btn" >Place Order</button>
+        </div>
+        <br>
     </span>
 </span>
-

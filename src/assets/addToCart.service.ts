@@ -32,7 +32,7 @@ return this.selectedItems;
      let item = this.selectedItems.find(ob => ob.id === id);
      let itemIndex = this.selectedItems.indexOf(item);
      this.selectedItems.splice(itemIndex, 1);
-  }
+  }    
 
   
   

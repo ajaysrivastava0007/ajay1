@@ -1,18 +1,47 @@
+
 h1{
     text-align: center;
     background-color: #2874F0;
     color: white;
     height: 4.5%;
-    /* border:1px solid  */
+    
 }
-#addedProducts{
-    list-style-type: none;
+.alert{
+    margin-left: 30%;
 }
-#productList{
-   width: 50%;
+.productList{
+    margin-left: 5% ;
+   width: 49%;
+   height: 46%;
+   border-style: outset;
+}
+#orderHeader{
+    text-align: center;
+    margin-top: 0;
+    padding-top: 2%;
+}
+.OrderName{
+    margin-top: 0;
+    margin-left: 31%;
+    font-size: larger;
+    
 }
 #productName{
     text-align: center;
+}
+.image{
+    width: 17%;
+}
+.save{
+    margin-left: 27%;
+    text-decoration: none;
+    color: black;
+    font-size: larger;  
+    cursor: pointer;
+   
+}
+.save :hover{
+    color: rgb(57, 57, 245);
 }
 #card{
     height: 19%;
@@ -21,24 +50,48 @@ h1{
     margin-right: 20%;
    font-size: large;
    padding: 1%;   
+   margin-left: 5%;
 }
-#removeButton{
-    margin-top: 5%;
-    text-align: center;
+.remove{
+   margin-left: 5%;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-size: larger; 
+    
 }
-#placeOrderButton{
-    float: left;
-    margin-top: 5%;
+.remove :hover{
+    color: rgb(57, 57, 245);
 }
-h4{
-    text-align: center;
-    color: rgb(3, 75, 110);
-    margin-top: 10%;
+#saveList{
+    list-style-type: none;
+    display: inline;
 }
-.card{
-    width: 25%;
-    height: 20%;
+#removeList{
+    list-style-type: none;
+    display: inline;
 }
-.alert {
-    margin-left: 20%;
+#productPrice{
+    list-style-type: none;
+    display: inline;
+    margin-left: .5%;
+    
+}
+#productImage{
+    list-style-type: none;
+    display: inline;
+}
+#price{
+    margin-left: 10%;
+    font-size: larger;
+    display: inline;
+}
+.btn {
+    margin-left: 80%;
+    background-color: gray;
+    padding: 1%;
+    color: white;
+}
+#footer{
+    margin-bottom: 0;
 }

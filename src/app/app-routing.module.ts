@@ -11,6 +11,7 @@ import { ElectronicsSectionComponent } from './electronics-section/electronics-s
 import { GrocerySectionComponent } from './grocery-section/grocery-section.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { CartComponent } from './cart/cart.component'
+import { ProductDescriptionComponent } from './product-description/product-description.component'
 
 
 
@@ -20,11 +21,12 @@ import { CartComponent } from './cart/cart.component'
 
 const routes: Routes = [
   {path:'', redirectTo:'dashboard', pathMatch:'full'},
-  {path: 'dashboard', component: DashboardComponent,},
+  {path: 'dashboard', component: DashboardComponent},
   {path: "men", component: MenSectionComponent},
   {path: "women", component: WomenSectionComponent},
   {path: "electronics", component: ElectronicsSectionComponent},
   {path: "grocery", component: GrocerySectionComponent},
+  {path: "description", component: ProductDescriptionComponent},
   {path: 'login', component: LoginPageComponent}, 
   {path: 'register', component: RegisterComponent},
   {path: 'inventory', component: InventoryComponent},

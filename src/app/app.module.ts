@@ -18,6 +18,7 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { CartComponent } from './cart/cart.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { ProductDescriptionComponent } from './product-description/product-description.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { HeaderComponent } from './header/header.component';
     CartComponent,
     FooterComponent,
     HeaderComponent,
+    ProductDescriptionComponent,
     
     
     

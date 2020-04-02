@@ -16,7 +16,6 @@ import value from '*.json';
 export class CartComponent implements OnInit {
   dashboardProduct: Model[] = []
   mensProductInCart: Model[] = []
-  public zero: number = 0;
   constructor(private cartService: addToCartService,
     private mensProduct: AddMensProductToCartService,
     private homePageProducts: ProductServiceService) { }
@@ -27,6 +26,7 @@ export class CartComponent implements OnInit {
   getItemsForCart(): void {
     this.dashboardProduct = this.cartService.getSelectedItems()
     }
+   
     
   getMensItemsForCart(){
     this.mensProductInCart = this.mensProduct.getMensSelectedItems();
@@ -45,7 +45,6 @@ export class CartComponent implements OnInit {
   }
   removeItemFromCart(id: number): void {
     this.cartService.removeHomePageItems(id);
-    this.removeMensItem(id);
   }
   removeMensItem(id: number): void {
     this.mensProduct.removeMensItems(id)

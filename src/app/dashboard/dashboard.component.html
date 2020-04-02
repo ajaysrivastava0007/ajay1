@@ -62,31 +62,29 @@
   <h1>Deals Of The Day</h1>
   <hr />
 </div><br><br><br>
-<!-- <div class="container"> -->
-  <span *ngIf="products">
-    <span *ngFor="let prod of products">
-      
-      <tr>
-        <div class="container">
+<span *ngIf="products">
+  <span *ngFor="let prod of products">
+
+    <tr>
+      <div class="container">
         <th>
-          <div class="card" id="productList">
-            <img class="card-img-top" src="{{prod.image}}" alt="Card image">
+          <div class="card" id="productList"  (click)="sendItemToDescriptionPage()">
+            <img class="card-img-top"  src="{{prod.image}}" alt="Card image">
             <div class="card-body">
               <h4 id="product-name" class="card-title"><b><u>{{prod.name}}</u></b></h4>
               <h4 id="product-name" class="card-title"><b><u>{{prod.price | currency:'INR'}}</u></b></h4>
             </div>
           </div><br>
-          <button id="dealButton" class="btn btn-primary" class="btn btn-outline-primary" (click)="sendItemToCart(prod.id)">
-           Add To Cart
+          <button id="dealButton" class="btn btn-primary" class="btn btn-outline-primary"
+            (click)="sendItemToCart(prod.id)">
+            Add To Cart
           </button><br><br><br><br><br>
-       
         </th>
       </div>
-      </tr>
-    
-    </span>
+    </tr>
+
   </span>
-<!-- </div> -->
+</span>
 <br><br>
 <hr>
 <app-footer></app-footer>

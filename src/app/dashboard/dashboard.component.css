@@ -40,7 +40,9 @@ h1{
   #productList{
    margin-left: 20%;  
    margin-top: 3%;
-   background-color: rgb(205, 202, 207);  
+   background-color: rgb(205, 202, 207); 
+   cursor: pointer; 
+   outline-style: none;
 }
 #product-name{
   text-align: center;
