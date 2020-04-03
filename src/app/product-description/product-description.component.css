@@ -5,6 +5,9 @@
 .image{
     margin-top: 5%;
 } 
+#descriptionHeader{
+    color: rgb(2, 2, 61);
+}
 
 #description{
     list-style-type: none;

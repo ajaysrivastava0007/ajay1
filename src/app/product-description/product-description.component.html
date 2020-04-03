@@ -21,7 +21,7 @@
         <div *ngFor="let prod of productDescription">
             <div class="main">
                 <div>
-                    <h1>
+                    <h1 id="descriptionHeader">
                         <marquee>Product-Description#{{prod.id}}#{{prod.category}}</marquee>
                     </h1>
                 </div>
@@ -47,16 +47,13 @@
                         <img src="{{prod.image}}" class="image">
                     </div>
                     <br><br><br>
-                    <div >
+                    <div>
                         <button class="btn" id="addButton" class="btn btn-primary" class="btn btn-outline-primary"
-                        type="button" (click)="sendItemToCart(prod.id)">Add To Cart</button><br>
+                            type="button" (click)="sendItemToCart(prod.id)">Add To Cart</button><br>
                         <br>
-                    <button class="btn" id="buyButton" class="btn btn-primary" class="btn btn-outline-primary"
-                        type="button">Buy Now</button>
+                        <button class="btn" id="buyButton" class="btn btn-primary" class="btn btn-outline-primary"
+                            type="button">Buy Now</button>
                     </div>
-                    
-
-
                 </div>
             </div>
         </div>

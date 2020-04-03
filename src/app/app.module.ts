@@ -19,6 +19,7 @@ import { CartComponent } from './cart/cart.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductDescriptionComponent } from './product-description/product-description.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { ProductDescriptionComponent } from './product-description/product-descr
     FooterComponent,
     HeaderComponent,
     ProductDescriptionComponent,
+    CheckoutComponent,
     
     
     
