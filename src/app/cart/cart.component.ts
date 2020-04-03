@@ -20,34 +20,50 @@ export class CartComponent implements OnInit {
     private mensProduct: AddMensProductToCartService,
     private homePageProducts: ProductServiceService) { }
 
-    public cartTotal = 0;
-    
+  public cartTotal = 0;
+
 
   getItemsForCart(): void {
     this.dashboardProduct = this.cartService.getSelectedItems()
-    }
-   
-    
-  getMensItemsForCart(){
+  }
+
+
+  getMensItemsForCart() {
     this.mensProductInCart = this.mensProduct.getMensSelectedItems();
-    for(let i =0;i<this.mensProductInCart.length;i++){
-      this.dashboardProduct.push()    }
+    for (let i = 0; i < this.mensProductInCart.length; i++) {
+      this.dashboardProduct.push()
+    }
   }
 
   ngOnInit(): void {
     this.getItemsForCart();
     this.getMensItemsForCart();
 
-    this.dashboardProduct.forEach(item =>{
-      this.cartTotal += (item.price)
+    this.dashboardProduct.forEach(item => {
+      if (this.dashboardProduct.length > 0) {
+        this.cartTotal += (item.price)
+      } else
+      if(this.removeItemFromCart) {
+        this.cartTotal = this.cartTotal - item.price
+      }
     })
-  
+
   }
   removeItemFromCart(id: number): void {
     this.cartService.removeHomePageItems(id);
+    this.onCLickRemove();
   }
   removeMensItem(id: number): void {
     this.mensProduct.removeMensItems(id)
   }
- 
+
+  onCLickRemove() {
+    this.dashboardProduct.forEach(item => {
+      for (let i = 0; i < this.dashboardProduct.length; i++) {
+        if (this.cartTotal > 0) {
+          (item.price)--;
+        }
+      }
+    })
+  }
 }

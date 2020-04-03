@@ -27,8 +27,8 @@ export class DashboardComponent implements OnInit {
     this.cartService.addHomePageItems(id);
   }
 
-  sendItemToDescriptionPage(){
-    this.cartService.getSelectedItems()
+  sendItemToDescriptionPage(id: number){
+    this.cartService.addItemOfDescription(id)
     // window.location.href = "/description";
     
   }

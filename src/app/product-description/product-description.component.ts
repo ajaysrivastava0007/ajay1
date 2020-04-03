@@ -10,12 +10,13 @@ import { addToCartService } from 'src/assets/addToCart.service';
 export class ProductDescriptionComponent implements OnInit {
  
   productDescription : Model[]=[]
-  constructor(private cartService: addToCartService) { }
-
- 
+  constructor(private cartService: addToCartService) { } 
 
   ngOnInit(): void {
     this.productDescription = this.cartService.getSelectedItems()
+  }
+  sendItemToCart(id: number) {
+    this.cartService.addHomePageItems(id);
   }
  
 }
