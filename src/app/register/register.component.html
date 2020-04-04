@@ -1,15 +1,13 @@
-<div class="header">
-  <img src="assets/images/myCart.jfif" routerLink="/dashboard" style="width: 3%; margin-left: 2%; cursor: pointer;" />
-  <input id="search" type="search" placeholder="Search for products, brands and more" />
+<app-header></app-header>
 
-  <div class="registerPage">
+<div class="registerPage">
     <form [formGroup]="userRegistration">
-      <div id="registerForm">
-        <h2>
-          <u><i>Registration Form</i> </u>
-        </h2>
-        <br />
-        <label>
+        <div id="registerForm">
+            <h2>
+                <u><i>Registration Form</i> </u>
+            </h2>
+            <br />
+            <label>
           First Name :<br />
           <input type="text" id="signupForm" class="form-control" formControlName="firstName" /><br />
           <span *ngIf="
@@ -18,8 +16,8 @@
             ">
             <em><u>Please enter valid first name</u></em></span>
         </label>
-        <br /><br />
-        <label>
+            <br /><br />
+            <label>
           Last Name :<br />
           <input type="text" class="form-control" formControlName="lastName" /><br />
           <span *ngIf="
@@ -28,8 +26,8 @@
             ">
             <em><u>Please enter valid last name</u></em></span>
         </label>
-        <br /><br />
-        <label>
+            <br /><br />
+            <label>
           Email :<br />
           <input type="text" class="form-control" formControlName="email" /><br />
           <span *ngIf="
@@ -38,8 +36,8 @@
             ">
             <em><u>Please enter valid email</u></em></span>
         </label>
-        <br /><br />
-        <label>
+            <br /><br />
+            <label>
           D.O.B :<br />
           <input type="date" class="form-control datepicker" formControlName="date" /><br />
           <span *ngIf="
@@ -48,15 +46,15 @@
             ">
             <em><u>Please enter valid date</u></em></span>
         </label>
-        <br /><br />
-        <label>
+            <br /><br />
+            <label>
           Gender :<br />
           <input type="radio" name="gender" value="Male" />Male <br />
           <input type="radio" name="gender" value="Female" />Female <br />
           <input type="radio" name="gender" value="Others" />Others
         </label>
-        <br /><br />
-        <label>
+            <br /><br />
+            <label>
           Password :<br />
           <input type="password" class="form-control" formControlName="password" /><br />
           <span *ngIf="
@@ -65,8 +63,8 @@
             ">
             <em><u>Please enter valid password</u></em></span>
         </label>
-        <br /><br />
-        <label>
+            <br /><br />
+            <label>
           <button class="btn btn-primary" routerLink="/login" type="button" [disabled]="!userRegistration.valid"
             (click)="onSubmit()">
             Submit</button><br /><br />
@@ -78,7 +76,8 @@
             </ul>
           </span>
         </label>
-      </div>
+        </div>
     </form>
-  </div>
 </div>
+
+<app-footer></app-footer>

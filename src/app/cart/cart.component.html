@@ -7,7 +7,7 @@
         <hr>
         Total Amount &nbsp;&nbsp; {{cartTotal | currency:'INR' }}
     </span>
-    <span *ngFor="let prod of dashboardProduct">
+<span *ngFor="let prod of dashboardProduct">
         <div class="productList">
             <h4 id="orderHeader">Order#{{prod.id}}#{{prod.name}}</h4>
             <hr>
@@ -30,7 +30,7 @@
                 </ul>
             </div>
             <hr>
-            <button  class="btn" >Place Order</button>
+            <button  class="btn" (click)="placeOrder()">Place Order</button>
         </div>
         <br>
     </span>

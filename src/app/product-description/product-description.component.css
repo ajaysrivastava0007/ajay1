@@ -1,44 +1,51 @@
-
-.container{
+.container {
     margin-bottom: 20%;
 }
-.image{
+
+.image {
     margin-top: 5%;
-} 
-#descriptionHeader{
+}
+
+#descriptionHeader {
     color: rgb(2, 2, 61);
 }
 
-#description{
+#description {
     list-style-type: none;
     float: right;
     margin-right: 40%;
     color: rgb(95, 100, 95);
 }
-#addButton{
-    margin-left: 6%;  
+
+#addButton {
+    margin-left: 6%;
 }
-#buyButton{   
+
+#buyButton {
     margin-left: 7%;
 }
-#list{
+
+#list {
     list-style-type: none;
     display: inline;
 }
 
-#men
-{
-  margin-left: 100%;
+#men {
+    margin-left: 100%;
 }
-#women{
-  margin-left: 85%;
+
+#women {
+    margin-left: 85%;
 }
-#electronics{
-  margin-left: 85%;
+
+#electronics {
+    margin-left: 85%;
 }
-#grocery{
-  margin-left: 85%;
+
+#grocery {
+    margin-left: 85%;
 }
-.list{
+
+.list {
     list-style-type: none;
 }

@@ -18,5 +18,7 @@ export class ProductDescriptionComponent implements OnInit {
   sendItemToCart(id: number) {
     this.cartService.addHomePageItems(id);
   }
- 
+ buyNow(){
+   window.location.href="/checkout"
+ }
 }

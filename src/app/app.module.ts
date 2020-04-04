@@ -20,6 +20,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductDescriptionComponent } from './product-description/product-description.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { OrderPlacedComponent } from './order-placed/order-placed.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
     HeaderComponent,
     ProductDescriptionComponent,
     CheckoutComponent,
+    OrderPlacedComponent,
     
     
     

@@ -1,0 +1,17 @@
+h1 {
+    text-align: center;
+    color: darkblue;
+}
+
+.container {
+    width: 30%;
+}
+
+hr {
+    text-align: center;
+}
+
+#submitButton {
+    margin-left: 40%;
+    width: 20%;
+}

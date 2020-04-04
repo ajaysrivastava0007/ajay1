@@ -1,1 +1,51 @@
-<p>checkout works!</p>
+<div class="container">
+    <form>
+        <h1>Fill The Details</h1>
+        <br>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Your First Name">
+            <br>
+            <input type="text" class="form-control" placeholder="Your Last Name">
+            <br>
+            <input type="text" class="form-control" placeholder="Enter your address here">
+            <br>
+            <input type="text" class="form-control" placeholder="Alternate Contact No.">
+            <br>
+            <h3>Address Type</h3>
+            <div class="checkbox">
+                <label><input type="radio" name="address" value="Home">Home</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="radio"  name="address" value="Office">Office</label>
+            </div>
+            <div class="checkbox ">
+                <label><input type="radio"  name="address" value="Others" >Others</label>
+            </div>
+            <br>
+            <h3>Select Payment Method</h3>
+            <div class="checkbox">
+                <label class="disabled"><input type="radio" name="payment" value="Home" disabled>UPI</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="radio"  name="payment" value="Office" disabled>Paytm</label>
+            </div>
+            <div class="checkbox ">
+                <label><input type="radio"  name="payment" value="COD" >Cash On Delivery</label>
+            </div>
+            <div class="checkbox ">
+                <label><input type="radio"  name="payment" value="Debit" disabled>Debit Card</label>
+            </div>
+            <div class="checkbox ">
+                <label><input type="radio"  name="payment" value="Credit" disabled>Credit Card</label>
+            </div>
+            <br>
+            <label for="Suggestion"><h3>Suggestion(if any)</h3></label>
+            <textarea class="form-control" rows="5" id="Suggestion"></textarea>
+            <br>
+            <div>
+                <button id="submitButton" class="btn btn-primary" class="btn btn-outline-primary" (click)="onSubmit()">
+                    Submit</button>
+            </div>
+        </div>
+    </form>
+</div>

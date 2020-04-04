@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckoutComponent implements OnInit {
 
+  public show: boolean= true;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
+    window.location.href="/orderPlaced"
   }
 
 }

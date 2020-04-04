@@ -51,19 +51,9 @@ export class CartComponent implements OnInit {
   }
   removeItemFromCart(id: number): void {
     this.cartService.removeHomePageItems(id);
-    this.onCLickRemove();
   }
-  removeMensItem(id: number): void {
-    this.mensProduct.removeMensItems(id)
-  }
-
-  onCLickRemove() {
-    this.dashboardProduct.forEach(item => {
-      for (let i = 0; i < this.dashboardProduct.length; i++) {
-        if (this.cartTotal > 0) {
-          (item.price)--;
-        }
-      }
-    })
+  placeOrder(){
+    window.location.href="/checkout";
+  
   }
 }

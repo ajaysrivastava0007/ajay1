@@ -1,32 +1,32 @@
 <app-header></app-header>
-  <div class="registerPage">
+<div class="loginPage">
     <form [formGroup]="userProfile">
-      <div>
-        <h2><u><i>Log-In</i></u></h2>
-        <br />&nbsp;
-        <label>
+        <div>
+            <h2><u><i>Log-In</i></u></h2>
+            <br />&nbsp;
+            <label>
           User-Id :<br><br> <input class="form-control" style="outline-style: none;" type="email"
             formControlName="email" /><br />
           <span *ngIf="!userProfile.get('email').valid && userProfile.get('email').dirty"><em><u>Please enter valid
                 email</u></em></span>
         </label>
-        <br /><br />&nbsp;
-        <label>
+            <br /><br />&nbsp;
+            <label>
           Password:<br><br>
           <input class="form-control" type="password" formControlName="password" /><br />
           <span *ngIf="!userProfile.get('password').valid && userProfile.get('password').dirty ">
             <em><u>Invalid password<br /></u></em></span>
         </label>
-        <br /><br />
-        <span><button id="login" class="btn btn-primary" type="button" [disabled]="!userProfile.valid"
+            <br /><br />
+            <span><button id="login" class="btn btn-primary" type="button" [disabled]="!userProfile.valid"
             (click)="onLogin()">
             signIn</button></span><br /><br />
-        <button id="register" class="btn btn-primary" routerLink="/register" type="button">
+            <button id="register" class="btn btn-primary" routerLink="/register" type="button">
           signUp
         </button>
-        <br /><br />
-      </div>
-      <span *ngIf="!userProfile.valid">
+            <br /><br />
+        </div>
+        <span *ngIf="!userProfile.valid">
         <ul id="caution">
           <em><u>Note:</u></em>
           <li>No space is allowed</li>
@@ -34,4 +34,5 @@
         </ul>
       </span>
     </form>
-  </div>
+</div>
+<app-footer></app-footer>

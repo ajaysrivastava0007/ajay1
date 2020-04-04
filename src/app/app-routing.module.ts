@@ -12,7 +12,8 @@ import { GrocerySectionComponent } from './grocery-section/grocery-section.compo
 import { InventoryComponent } from './inventory/inventory.component';
 import { CartComponent } from './cart/cart.component'
 import { ProductDescriptionComponent } from './product-description/product-description.component'
-
+import { CheckoutComponent } from './checkout/checkout.component';
+import { OrderPlacedComponent } from './order-placed/order-placed.component'
 
 
 
@@ -31,6 +32,8 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'inventory', component: InventoryComponent},
   {path: 'cart', component: CartComponent},
+  {path: 'checkout', component: CheckoutComponent},
+  {path: 'orderPlaced', component: OrderPlacedComponent},
   {path: '**', component: PageNotFoundComponent },
   
   
