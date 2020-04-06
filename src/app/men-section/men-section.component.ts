@@ -14,14 +14,20 @@ export class MenSectionComponent implements OnInit {
 mensList: Model[]=[]
 
   constructor(private mens: MensProductService,
-    private addToCart: AddMensProductToCartService) { }
+    private addToCart: addToCartService,
+    private cartService: addToCartService) { }
 
   ngOnInit(): void {
     this.mensList = this.mens.getMensProduct();
   }
 
   addProductToCart(id:number){
-    this.addToCart.addMensItems(id)
+    this.addToCart.addHomePageItems(id)
+  }
+  sendItemToDescriptionPage(id: number){
+    this.cartService.addMensItemOfDescription(id)
+    // window.location.href = "/description";
+    
   }
 
 }

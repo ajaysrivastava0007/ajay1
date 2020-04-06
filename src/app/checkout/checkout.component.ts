@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RegisterService } from '../../assets/register.service'
 
 @Component({
   selector: 'app-checkout',
@@ -8,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class CheckoutComponent implements OnInit {
 
   public show: boolean= true;
-  constructor() { }
+  constructor(private registerService: RegisterService) { }
 
   ngOnInit(): void {
   }
+
+ public userRegistration = this.registerService.userRegistration;
 
   onSubmit(){
     window.location.href="/orderPlaced"

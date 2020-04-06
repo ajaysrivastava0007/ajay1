@@ -6,10 +6,18 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
 })
 export class LoginService {
 
-  constructor() { }
+  token: string;
+  constructor() {
+    const user = JSON.parse(localStorage.getItem('key'));
+    if ( user ) {
+      this.token = user.accessToken;
+    }
+  
+   }
 
 
   public loginStatus = 0;
+  
 
   userProfile = new FormGroup({
     email: new FormControl("", [
@@ -21,13 +29,14 @@ export class LoginService {
       Validators.minLength(4),
       Validators.required,
       // Validators.pattern("(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-zd$@$!%*?&].{8,}")
-    ])
+    ]),
   });
 
   ngOnInit() {
 
   }
 
+ 
   setLoginStatus(status: number) {
     this.loginStatus = status;
   }
@@ -52,11 +61,11 @@ export class LoginService {
         // this.setLoginStatus(0);
       } else {
         console.log("user not permitted or invalid credentials");
-        
+
       }
     }
   }
 
-  
+
 
 }

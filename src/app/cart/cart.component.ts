@@ -28,32 +28,25 @@ export class CartComponent implements OnInit {
   }
 
 
-  getMensItemsForCart() {
-    this.mensProductInCart = this.mensProduct.getMensSelectedItems();
-    for (let i = 0; i < this.mensProductInCart.length; i++) {
-      this.dashboardProduct.push()
-    }
-  }
-
   ngOnInit(): void {
     this.getItemsForCart();
-    this.getMensItemsForCart();
+    // this.removeItemFromCart()
 
     this.dashboardProduct.forEach(item => {
-      if (this.dashboardProduct.length > 0) {
-        this.cartTotal += (item.price)
-      } else
-      if(this.removeItemFromCart) {
-        this.cartTotal = this.cartTotal - item.price
-      }
+      this.cartTotal += (item.price)
+
     })
 
   }
   removeItemFromCart(id: number): void {
     this.cartService.removeHomePageItems(id);
   }
-  placeOrder(){
-    window.location.href="/checkout";
-  
+  sendItemToWishlist(id: number){
+    this.cartService.removeHomePageItems(id);
+    alert("item saved");
+  }
+  placeOrder() {
+    window.location.href = "/checkout";
+
   }
 }

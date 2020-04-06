@@ -12,22 +12,31 @@ export class addToCartService {
     private mensProductList: MensProductService) { }
 
   selectedItems: Model[] = [];
+  selectedMensItem: Model[] = [];
 
   getItems(): Model[] {
     return this.productService.productList;
+  }
+
+  getMensItem(): Model[] {
+    return this.mensProductList.mensProductList;
   }
 
   getSelectedItems(): Model[] {
     return this.selectedItems;
   }
 
+  getSelectedMensItems(): Model[]{
+    return this.selectedMensItem;
+  }
+
   addHomePageItems(id: number): void {
     let item = this.productService.productList.find(ob => ob.id === id);
     if (this.selectedItems.indexOf(item) < 0) {
       this.selectedItems.push(item);
-
     }
   }
+
   removeHomePageItems(id: number): void {
     let item = this.selectedItems.find(ob => ob.id === id);
     let itemIndex = this.selectedItems.indexOf(item);
@@ -38,10 +47,19 @@ export class addToCartService {
     let item = this.productService.productList.find(ob => ob.id === id);
     if (this.selectedItems.indexOf(item) < 0) {
       let itemIndex = this.selectedItems.indexOf(item);
-      this.selectedItems.splice(itemIndex,1);
+      this.selectedItems.splice(itemIndex, 1);
       this.selectedItems.push(item)
-     
-      }
-    
+    }
+
+  }
+
+  addMensItemOfDescription(id: number) {
+    let item = this.mensProductList.mensProductList.find(ob => ob.id === id);
+    if (this.selectedMensItem.indexOf(item) < 0) {
+      let itemIndex = this.selectedItems.indexOf(item);
+      this.selectedMensItem.splice(itemIndex, 1);
+      this.selectedMensItem.push(item)
+    }
+
   }
 }

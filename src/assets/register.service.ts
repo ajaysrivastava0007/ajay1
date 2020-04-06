@@ -31,7 +31,14 @@ export class RegisterService {
       Validators.pattern(
         "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-zd$@$!%*?&].{8,}"
       )
-    ])
+    ]),
+    address: new FormControl("", [
+      Validators.required,
+      Validators.pattern("^[a-zA-z -/0-9]{8,20}")
+    ]),
+    phone: new FormControl("", [Validators.required,
+    Validators.pattern("^[0-9]{10,12}")
+    ]),
   });
 
 }
