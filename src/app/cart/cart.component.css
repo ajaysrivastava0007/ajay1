@@ -1,97 +1,109 @@
-
-h1{
+h1 {
     text-align: center;
     background-color: #2874F0;
     color: white;
     height: 4.5%;
-    
 }
-.alert{
+
+.alert {
     margin-left: 30%;
 }
-.productList{
-    margin-left: 5% ;
-   width: 49%;
-   height: 46%;
-   border-style: outset;
+
+.productList {
+    margin-left: 5%;
+    width: 49%;
+    height: 48%;
+    border-style: outset;
 }
-#orderHeader{
+
+#orderHeader {
     text-align: center;
     margin-top: 0;
     padding-top: 2%;
 }
-.OrderName{
+
+.OrderName {
     margin-top: 0;
     margin-left: 31%;
     font-size: larger;
-    
 }
-#productName{
+
+#productName {
     text-align: center;
 }
-.image{
+
+.image {
     width: 17%;
 }
-.save{
+
+.save {
     margin-left: 27%;
     text-decoration: none;
     color: black;
-    font-size: larger;  
+    font-size: larger;
     cursor: pointer;
-   
 }
-.save :hover{
+
+.save :hover {
     color: rgb(57, 57, 245);
 }
-#card{
+
+#card {
     height: 19%;
     width: 25%;
     float: right;
     margin-right: 20%;
-   font-size: large;
-   padding: 1%;   
-   margin-left: 5%;
+    font-size: large;
+    padding: 1%;
+    margin-left: 5%;
 }
-.remove{
-   margin-left: 5%;
+
+.remove {
+    margin-left: 5%;
     cursor: pointer;
     text-decoration: none;
     color: black;
-    font-size: larger; 
-    
+    font-size: larger;
 }
-.remove :hover{
+
+.remove :hover {
     color: rgb(57, 57, 245);
 }
-#saveList{
+
+#saveList {
     list-style-type: none;
     display: inline;
 }
-#removeList{
+
+#removeList {
     list-style-type: none;
     display: inline;
 }
-#productPrice{
+
+#productPrice {
     list-style-type: none;
     display: inline;
     margin-left: .5%;
-    
 }
-#productImage{
+
+#productImage {
     list-style-type: none;
     display: inline;
 }
-#price{
+
+#price {
     margin-left: 10%;
     font-size: larger;
     display: inline;
 }
+
 .btn {
     margin-left: 80%;
     background-color: gray;
-    padding: 1%;
+    /* margin-bottom: 4%; */
     color: white;
 }
-#footer{
+
+#footer {
     margin-bottom: 0;
 }

@@ -1,40 +1,46 @@
- #productList{
-    margin-left: 20%;  
-    margin-top: 5%;
-    background-color: rgb(205, 202, 207);
- 
-}
-#womensImage{
-    width: 35%;
-    margin-top: 2%;
-}
-button{
-    /* background-color: rgb(250, 244, 244); */
-    /* color: rgb(14, 14, 10); */
-    margin-left: 35%;
-    outline-style: none;
-    margin-top: 2%;
-  }
-  #product-name{
-    text-align: center;
-    font-weight: 5%;
-    color: #4f5253;
-  }
-   #men
-  {
-    margin-left: 100%;
-  }
-  #women{
-    margin-left: 85%;
-  }
-  #electronics{
-    margin-left: 85%;
-  }
-  #grocery{
-    margin-left: 85%;
-  }
+ #productList {
+   margin-left: 20%;
+   margin-top: 5%;
+   background-color: rgb(205, 202, 207);
+   cursor: pointer;
+ }
 
-  h2{
-    text-align: center;
-    color: rgb(3, 75, 110);
-  }
+ #womensImage {
+   width: 35%;
+   margin-top: 2%;
+ }
+
+ button {
+   /* background-color: rgb(250, 244, 244); */
+   /* color: rgb(14, 14, 10); */
+   margin-left: 35%;
+   outline-style: none;
+   margin-top: 2%;
+ }
+
+ #product-name {
+   text-align: center;
+   font-weight: 5%;
+   color: #4f5253;
+ }
+
+ #men {
+   margin-left: 100%;
+ }
+
+ #women {
+   margin-left: 85%;
+ }
+
+ #electronics {
+   margin-left: 85%;
+ }
+
+ #grocery {
+   margin-left: 85%;
+ }
+
+ h2 {
+   text-align: center;
+   color: rgb(3, 75, 110);
+ }

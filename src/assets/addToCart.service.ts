@@ -3,63 +3,130 @@ import { Subject } from "rxjs";
 import { ProductServiceService } from './product-service.service'
 import { Model } from '../app/model'
 import { MensProductService } from './mens-product.service';
+import { WomensSectionService } from './womens-product.service';
+import { ElectronicsSectionService } from './electronics-product.service';
+import { GrocerySectionService } from './grocery-product.service';
 
 @Injectable({
   providedIn: "root"
 })
 export class addToCartService {
   constructor(private productService: ProductServiceService,
-    private mensProductList: MensProductService) { }
+    private mensProductList: MensProductService,
+    private womensProductList: WomensSectionService,
+    private electronicsProductList: ElectronicsSectionService,
+    private groceryProductList: GrocerySectionService) { }
 
   selectedItems: Model[] = [];
-  selectedMensItem: Model[] = [];
 
-  getItems(): Model[] {
-    return this.productService.productList;
-  }
+  totalProducts: Model[] = [];
 
-  getMensItem(): Model[] {
-    return this.mensProductList.mensProductList;
+  allProducts() {
+    for (let i = 0; i < this.productService.productList.length; i++) {
+      this.totalProducts.push(this.productService.productList[i]);
+    }
+    for (let i = 0; i < this.mensProductList.mensProductList.length; i++) {
+      this.totalProducts.push(this.mensProductList.mensProductList[i]);
+    }
+    for (let i = 0; i < this.womensProductList.womensProductList.length; i++) {
+      this.totalProducts.push(this.womensProductList.womensProductList[i])
+    }
+    for (let i = 0; i < this.electronicsProductList.electronicsProductList.length; i++) {
+      this.totalProducts.push(this.electronicsProductList.electronicsProductList[i])
+    }
+    for (let i = 0; i < this.groceryProductList.groceryProductList.length; i++) {
+      this.totalProducts.push(this.groceryProductList.groceryProductList[i])
+    }
   }
 
   getSelectedItems(): Model[] {
-    return this.selectedItems;
-  }
-
-  getSelectedMensItems(): Model[]{
-    return this.selectedMensItem;
+    return this.totalProducts;
   }
 
   addHomePageItems(id: number): void {
     let item = this.productService.productList.find(ob => ob.id === id);
-    if (this.selectedItems.indexOf(item) < 0) {
-      this.selectedItems.push(item);
+    if (this.totalProducts.indexOf(item) < 0) {
+      this.totalProducts.push(item);
+    }
+  }
+
+  addMensPageItems(id: number): void {
+    let item = this.mensProductList.mensProductList.find(ob => ob.id === id);
+    if (this.totalProducts.indexOf(item) < 0) {
+      this.totalProducts.push(item);
+    }
+  }
+
+  addWomensPageItems(id: number): void {
+    let item = this.womensProductList.womensProductList.find(ob => ob.id === id);
+    if (this.totalProducts.indexOf(item) < 0) {
+      this.totalProducts.push(item);
+    }
+  }
+
+  addElectronicsPageItems(id: number): void {
+    let item = this.electronicsProductList.electronicsProductList.find(ob => ob.id === id);
+    if (this.totalProducts.indexOf(item) < 0) {
+      this.totalProducts.push(item);
+    }
+  }
+
+  addGroceryPageItems(id: number): void {
+    let item = this.groceryProductList.groceryProductList.find(ob => ob.id === id);
+    if (this.totalProducts.indexOf(item) < 0) {
+      this.totalProducts.push(item);
     }
   }
 
   removeHomePageItems(id: number): void {
-    let item = this.selectedItems.find(ob => ob.id === id);
-    let itemIndex = this.selectedItems.indexOf(item);
-    this.selectedItems.splice(itemIndex, 1);
+    let item = this.totalProducts.find(ob => ob.id === id);
+    let itemIndex = this.totalProducts.indexOf(item);
+    this.totalProducts.splice(itemIndex, 1);
   }
 
   addItemOfDescription(id: number) {
     let item = this.productService.productList.find(ob => ob.id === id);
-    if (this.selectedItems.indexOf(item) < 0) {
+    if (this.totalProducts.indexOf(item) < 0) {
       let itemIndex = this.selectedItems.indexOf(item);
-      this.selectedItems.splice(itemIndex, 1);
-      this.selectedItems.push(item)
+      this.totalProducts.splice(itemIndex, 1);
+      this.totalProducts.push(item)
     }
 
   }
 
   addMensItemOfDescription(id: number) {
     let item = this.mensProductList.mensProductList.find(ob => ob.id === id);
-    if (this.selectedMensItem.indexOf(item) < 0) {
+    if (this.totalProducts.indexOf(item) < 0) {
       let itemIndex = this.selectedItems.indexOf(item);
-      this.selectedMensItem.splice(itemIndex, 1);
-      this.selectedMensItem.push(item)
+      this.totalProducts.splice(itemIndex, 1);
+      this.totalProducts.push(item)
     }
+  }
 
+  addWomensItemOfDescription(id: number) {
+    let item = this.womensProductList.womensProductList.find(ob => ob.id === id);
+    if (this.totalProducts.indexOf(item) < 0) {
+      let itemIndex = this.selectedItems.indexOf(item);
+      this.totalProducts.splice(itemIndex, 1);
+      this.totalProducts.push(item)
+    }
+  }
+
+  addElectronicsItemOfDescription(id: number) {
+    let item = this.electronicsProductList.electronicsProductList.find(ob => ob.id === id);
+    if (this.totalProducts.indexOf(item) < 0) {
+      let itemIndex = this.selectedItems.indexOf(item);
+      this.totalProducts.splice(itemIndex, 1);
+      this.totalProducts.push(item)
+    }
+  }
+
+  addGroceryItemOfDescription(id: number) {
+    let item = this.groceryProductList.groceryProductList.find(ob => ob.id === id);
+    if (this.totalProducts.indexOf(item) < 0) {
+      let itemIndex = this.selectedItems.indexOf(item);
+      this.totalProducts.splice(itemIndex, 1);
+      this.totalProducts.push(item)
+    }
   }
 }

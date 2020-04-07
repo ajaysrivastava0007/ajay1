@@ -11,7 +11,7 @@ import { AddMensProductToCartService } from 'src/assets/add-mens-product-to-cart
 })
 export class MenSectionComponent implements OnInit {
 
-mensList: Model[]=[]
+  mensList: Model[] = []
 
   constructor(private mens: MensProductService,
     private addToCart: addToCartService,
@@ -21,13 +21,15 @@ mensList: Model[]=[]
     this.mensList = this.mens.getMensProduct();
   }
 
-  addProductToCart(id:number){
-    this.addToCart.addHomePageItems(id)
+  addProductToCart(id: number) {
+    this.addToCart.addMensPageItems(id)
   }
-  sendItemToDescriptionPage(id: number){
+  
+
+  sendItemToDescriptionPage(id: number) {
     this.cartService.addMensItemOfDescription(id)
     // window.location.href = "/description";
-    
+
   }
 
 }

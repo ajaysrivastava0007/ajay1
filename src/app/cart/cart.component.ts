@@ -16,37 +16,34 @@ import value from '*.json';
 export class CartComponent implements OnInit {
   dashboardProduct: Model[] = []
   mensProductInCart: Model[] = []
+  totalProduct: Model[] = []
   constructor(private cartService: addToCartService,
     private mensProduct: AddMensProductToCartService,
     private homePageProducts: ProductServiceService) { }
 
   public cartTotal = 0;
 
-
   getItemsForCart(): void {
     this.dashboardProduct = this.cartService.getSelectedItems()
   }
 
-
   ngOnInit(): void {
     this.getItemsForCart();
-    // this.removeItemFromCart()
-
     this.dashboardProduct.forEach(item => {
       this.cartTotal += (item.price)
-
     })
-
   }
+
   removeItemFromCart(id: number): void {
     this.cartService.removeHomePageItems(id);
   }
-  sendItemToWishlist(id: number){
+
+  sendItemToWishlist(id: number) {
     this.cartService.removeHomePageItems(id);
     alert("item saved");
   }
+
   placeOrder() {
     window.location.href = "/checkout";
-
   }
 }

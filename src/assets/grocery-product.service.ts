@@ -9,12 +9,12 @@ export class GrocerySectionService {
   
   constructor() { }
   groceryProductList:Model[]=[
-    new Model(1, 'Refined-Oil', 'assets/images/groceryFortuneOil.jpg',8,"Grocery-Product"),
-    new Model(2, 'Apple', 'assets/images/groceryApple.jpg',3,"Grocery-Product"),
-    new Model(3, 'Tomato', 'assets/images/groceryTomato.jpg',1 ,"Grocery-Product"),
+    new Model(1, 'Refined-Oil', 'assets/images/groceryFortuneOil.jpg',102,"Grocery-Product"),
+    new Model(2, 'Apple', 'assets/images/groceryApple.jpg',80,"Grocery-Product"),
+    new Model(3, 'Tomato', 'assets/images/groceryTomato.jpg',20 ,"Grocery-Product"),
     new Model(4, 'White-Rice', 'assets/images/groceryRice.jpg',54,"Grocery-Product"),
-    new Model(5, 'Onion', 'assets/images/dealOnion.jpg',2,"Grocery-Product"),
-    new Model(6, 'Breads', 'assets/images/dealBread.jfif',1.5 ,"Grocery-Product"),
+    new Model(5, 'Onion', 'assets/images/dealOnion.jpg',20,"Grocery-Product"),
+    new Model(6, 'Breads', 'assets/images/dealBread.jfif',30 ,"Grocery-Product"),
   ]
 
   getGroceryProduct()

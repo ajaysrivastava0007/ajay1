@@ -8,12 +8,12 @@ export class WomensSectionService {
 
   constructor() { }
   womensProductList:Model[]=[
-    new Model(1, 'Saree','assets/images/womensSaree.jpg',55,"Womens-Product"),
-    new Model(2, 'Tops','assets/images/womensTop.jpg',13,"Womens-Product"),
-    new Model(3, 'Shoes','assets/images/womensShoes.jpg', 40,"Womens-Product"),
-    new Model(4, 'Coat','assets/images/womenCoat.jpg', 50 ,"Womens-Product"),
-    new Model(5, 'Shawl','assets/images/womenShawl.jpg', 35 ,"Womens-Product"),
-    new Model(6, 'Sandels','assets/images/dealLadiesFootwear.jpg', 10,"Womens-Product"),
+    new Model(1, 'Saree','assets/images/womensSaree.jpg',1500,"Womens-Product"),
+    new Model(2, 'Tops','assets/images/womensTop.jpg',1300,"Womens-Product"),
+    new Model(3, 'Shoes','assets/images/womensShoes.jpg', 1000,"Womens-Product"),
+    new Model(4, 'Coat','assets/images/womenCoat.jpg', 5000 ,"Womens-Product"),
+    new Model(5, 'Shawl','assets/images/womenShawl.jpg', 700 ,"Womens-Product"),
+    new Model(6, 'Sandels','assets/images/dealLadiesFootwear.jpg', 800,"Womens-Product"),
     
   ]
 
