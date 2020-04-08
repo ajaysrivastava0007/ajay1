@@ -9,10 +9,10 @@ export class ProductServiceService {
   constructor() {}
 
   productList: Model[] = [
-    new Model(1, "Shoes", "assets/images/dealShoes.jpg", 3000 ,"Deal-Product"),
-    new Model(2, "Earphone", "assets/images/dealEarphone.jpg", 500,"Deal-Product"),
+    new Model(1, "Shoes", "assets/images/dealShoes.jpg", 2999 ,"Deal-Product"),
+    new Model(2, "Earphone", "assets/images/dealEarphone.jpg", 500-1,"Deal-Product"),
     new Model(3, "Gloves", "assets/images/dealGlove.jpg", 300 ,"Deal-Product"),
-    new Model(4, "Jacket", "assets/images/dealJacket.jpg", 1500 ,"Deal-Product"),
+    new Model(4, "Jacket", "assets/images/dealJacket.jpg", 1500 +99,"Deal-Product"),
     new Model(5, "T-shirt", "assets/images/dealTshirt.jpg", 350,"Deal-Product"),
     new Model(6, "Bag", "assets/images/dealBag.jpg", 800 ,"Deal-Product"),
     new Model(7, "Onion", "assets/images/dealOnion.jpg", 20 ,"Deal-Product"),
@@ -27,6 +27,8 @@ export class ProductServiceService {
     new Model(16, "Sweater", "assets/images/dealSweater.jpg", 1200,"Deal-Product"),
     new Model(17, "Sneaker", "assets/images/dealSneakers.jpg", 800,"Deal-Product"),
     new Model(18, "Formal Shoes", "assets/images/dealFormalShoes.jpg", 2000,"Deal-Product"),
+    new Model(19, "Gown", "assets/images/dealGown.jpg", 1699,"Deal-Product"),
+    new Model(20, "Formal Trouser", "assets/images/dealTrouser.jpg", 999,"Deal-Product"),
   ]
 
   cartProducts: Model[] = [];

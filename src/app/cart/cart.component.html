@@ -1,11 +1,28 @@
 <app-header></app-header>
 <h1>Cart</h1>
-<span *ngIf="dashboardProduct.length === 0" class="alert" class="alert alert-info">Your Cart is Empty</span>
+<span *ngIf="dashboardProduct.length === 0">
+    <span><img src="https://media.tenor.com/images/2322364e6a7be9406868eeefaaa8ddc0/tenor.gif" id="emptyCartImage">
+        <div class="alert" class="alert alert-primary" >
+          Your Cart Is Empty!!
+          </div>
+    </span>
+</span>
 <span *ngIf="dashboardProduct">
-    <span class="card" id="card">
-        <p>Price Details</p>
-        <hr>
-        Total Amount &nbsp;&nbsp; {{cartTotal | currency:'INR' }}
+    <span *ngIf="dashboardProduct.length>0" class="card" id="card">
+        <p>Price Details</p><hr>
+      
+           Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {{cartTotal | currency:'INR' }}<br><br>
+            GST &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              {{.18 | percent}}
+              <hr>
+              Total Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{gst | currency:'INR'}}
+          
+
+       
     </span>
     <span *ngFor="let prod of dashboardProduct">
         <div class="productList">
@@ -30,9 +47,9 @@
                     </li>
                 </ul>
             </div>
-            <hr>
-            <button class="btn" (click)="placeOrder()">Place Order</button>
         </div>
-        <br>
     </span>
+    <div *ngIf="dashboardProduct.length>0" class="placeOrder">
+        <button class="btn" (click)="placeOrder()">Place Order</button>
+    </div>
 </span>

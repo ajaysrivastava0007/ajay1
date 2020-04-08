@@ -3,6 +3,9 @@
     background-color: #2874f0;
     height: 10%;
 }
+.main{
+    margin-left: 10%;
+}
 
 .loginPage {
     margin-bottom: 2%;
@@ -19,9 +22,7 @@ form {
     margin-left: 40%;
     margin-right: 40%;
     margin-top: 3%;
-    border-style: double;
-    border-color: #2874f0;
-    background-color: rgb(206, 234, 245);
+    border-style: outset;
 }
 
 h2 {
@@ -34,11 +35,13 @@ input {
 }
 
 #login {
-    color: rgb(241, 239, 239);
-    background-color: rgb(123, 189, 243);
-    outline: none;
-    margin-left: 40%;
+    color: rgb(8, 7, 7);
+    margin-left: 33%;
     cursor: pointer;
+}
+
+#login :hover {
+    color: honeydew;
 }
 
 span {
@@ -46,10 +49,13 @@ span {
 }
 
 #register {
-    margin-left: 39%;
-    color: rgb(241, 238, 238);
-    background-color: rgb(123, 189, 243);
-    outline: none;
+    margin-left: 16%;
+    color: rgb(10, 9, 9);
+    cursor: pointer;
+}
+
+#register:hover {
+    color: honeydew;
 }
 
 #caution {

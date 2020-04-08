@@ -4,7 +4,7 @@
   <form [formGroup]="userRegistration">
     <div id="registerForm">
       <h2>
-        <u style="margin-left: 20%;"><i>SignUp</i> </u>
+        <u style="margin-left: 30%; color: darkblue;">SignUp </u>
       </h2>
       <br />
       <label>
@@ -65,8 +65,8 @@
       </label>
       <br /><br />
       <label>
-        <button class="btn btn-primary" routerLink="/login" type="button" [disabled]="!userRegistration.valid"
-          (click)="onSubmit()">
+        <button  id="submitButton"class="form-control" class="btn btn-primary" class="btn btn-outline-primary" routerLink="/login"
+          type="button" [disabled]="!userRegistration.valid" (click)="onSubmit()">
           Submit</button><br /><br />
         <span *ngIf="!userRegistration.valid">
           <ul>

@@ -6,7 +6,7 @@ import { addToCartService } from 'src/assets/addToCart.service';
 import { ProtractorExpectedConditions } from 'protractor';
 import { ProductServiceService } from '../../assets/product-service.service'
 import { AddMensProductToCartService } from 'src/assets/add-mens-product-to-cart.service';
-import value from '*.json';
+
 
 @Component({
   selector: 'app-cart',
@@ -22,7 +22,10 @@ export class CartComponent implements OnInit {
     private homePageProducts: ProductServiceService) { }
 
   public cartTotal = 0;
-
+  public initialGst=18;
+  public gst = 0;
+  // public deliveryFee = 0;
+  // public deliveryFee1 = 40;
   getItemsForCart(): void {
     this.dashboardProduct = this.cartService.getSelectedItems()
   }
@@ -31,7 +34,12 @@ export class CartComponent implements OnInit {
     this.getItemsForCart();
     this.dashboardProduct.forEach(item => {
       this.cartTotal += (item.price)
+      // this.deliveryFee1 +=  this.deliveryFee1
+      this.gst = this.cartTotal + this.cartTotal * (18 / 100);
+      // this.deliveryFee = this.cartTotal+40;
+      
     })
+    
   }
 
   removeItemFromCart(id: number): void {
