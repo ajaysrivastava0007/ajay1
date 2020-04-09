@@ -14,6 +14,8 @@ export class WomensSectionService {
     new Model(4, 'Coat','assets/images/womenCoat.jpg', 5000 ,"Womens-Product"),
     new Model(5, 'Shawl','assets/images/womenShawl.jpg', 700 ,"Womens-Product"),
     new Model(6, 'Sandels','assets/images/dealLadiesFootwear.jpg', 800,"Womens-Product"),
+    new Model(7, 'Sweater','assets/images/dealSweater.jpg', 1200,"Womens-Product"),
+    new Model(8, 'Kurti','assets/images/dealKurti.jpg', 350,"Womens-Product"),
     
   ]
 

@@ -35,7 +35,7 @@ export class CartComponent implements OnInit {
     this.dashboardProduct.forEach(item => {
       this.cartTotal += (item.price)
       // this.deliveryFee1 +=  this.deliveryFee1
-      this.gst = this.cartTotal + this.cartTotal * (18 / 100);
+      this.gst = this.cartTotal + this.cartTotal * (8 / 100);
       // this.deliveryFee = this.cartTotal+40;
       
     })
@@ -52,6 +52,8 @@ export class CartComponent implements OnInit {
   }
 
   placeOrder() {
+    this.cartService.getSelectedItems()
+    console.log("sent")
     window.location.href = "/checkout";
   }
 }

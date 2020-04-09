@@ -3,8 +3,16 @@ h1 {
     color: darkblue;
 }
 
-.container {
-    width: 30%;
+.list {
+    list-style-type: none;
+}
+
+#list1 {
+    display: inline;
+}
+
+#list2 {
+    display: inline;
 }
 
 hr {
@@ -17,5 +25,17 @@ hr {
 }
 
 .main {
-  background-color: oldlace;
+    border-style: outset;
+    margin-left: 5%;
+    margin-right: 55%;
+    margin-bottom: 5%;
+    margin-top: 2%;
+}
+
+.productList {
+    border-style: outset;
+    margin-left: 55%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    margin-top: 2%;
 }

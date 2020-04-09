@@ -107,11 +107,12 @@ h1 {
 
 .btn {
     /* float: right; */
-    margin-left: 75%;
+    margin-left: 63%;
     background-color:tomato;
     color: white;
     margin-top: 1%;
     margin-bottom: 1%;
+    width: 30%;
 }
 .placeOrder{
     border-style: outset;

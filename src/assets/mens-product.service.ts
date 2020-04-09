@@ -19,6 +19,9 @@ export class MensProductService {
     new Model(4, "Jacket", "assets/images/dealJacket.jpg",3500 ,"Mens-Product"),
     new Model(5, "Shoes", "assets/images/mensShoes.jpg",1500 ,"Mens-Product"),
     new Model(6, "Shorts", "assets/images/mensShorts.jpg",500 ,"Mens-Product"),
+    new Model(7, "Sneakers", "assets/images/dealShoes.jpg",3000,"Mens-Product"),
+    new Model(8, "T-Shirt", "assets/images/dealTshirt.jpg",350 ,"Mens-Product"),
+
   ]
 
   getMensProduct()

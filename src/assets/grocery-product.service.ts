@@ -15,6 +15,8 @@ export class GrocerySectionService {
     new Model(4, 'White-Rice', 'assets/images/groceryRice.jpg',54,"Grocery-Product"),
     new Model(5, 'Onion', 'assets/images/dealOnion.jpg',20,"Grocery-Product"),
     new Model(6, 'Breads', 'assets/images/dealBread.jfif',30 ,"Grocery-Product"),
+    new Model(7, 'Spinach', 'assets/images/grocerySpinach.jpg',15,"Grocery-Product"),
+    new Model(8, 'Potato', 'assets/images/groceryPotato.jpg',10,"Grocery-Product"),
   ]
 
   getGroceryProduct()

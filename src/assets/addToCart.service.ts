@@ -21,23 +21,23 @@ export class addToCartService {
 
   totalProducts: Model[] = [];
 
-  allProducts() {
-    for (let i = 0; i < this.productService.productList.length; i++) {
-      this.totalProducts.push(this.productService.productList[i]);
-    }
-    for (let i = 0; i < this.mensProductList.mensProductList.length; i++) {
-      this.totalProducts.push(this.mensProductList.mensProductList[i]);
-    }
-    for (let i = 0; i < this.womensProductList.womensProductList.length; i++) {
-      this.totalProducts.push(this.womensProductList.womensProductList[i])
-    }
-    for (let i = 0; i < this.electronicsProductList.electronicsProductList.length; i++) {
-      this.totalProducts.push(this.electronicsProductList.electronicsProductList[i])
-    }
-    for (let i = 0; i < this.groceryProductList.groceryProductList.length; i++) {
-      this.totalProducts.push(this.groceryProductList.groceryProductList[i])
-    }
-  }
+  // allProducts() {
+  //   for (let i = 0; i < this.productService.productList.length; i++) {
+  //     this.totalProducts.push(this.productService.productList[i]);
+  //   }
+  //   for (let i = 0; i < this.mensProductList.mensProductList.length; i++) {
+  //     this.totalProducts.push(this.mensProductList.mensProductList[i]);
+  //   }
+  //   for (let i = 0; i < this.womensProductList.womensProductList.length; i++) {
+  //     this.totalProducts.push(this.womensProductList.womensProductList[i])
+  //   }
+  //   for (let i = 0; i < this.electronicsProductList.electronicsProductList.length; i++) {
+  //     this.totalProducts.push(this.electronicsProductList.electronicsProductList[i])
+  //   }
+  //   for (let i = 0; i < this.groceryProductList.groceryProductList.length; i++) {
+  //     this.totalProducts.push(this.groceryProductList.groceryProductList[i])
+  //   }
+  // }
 
   getSelectedItems(): Model[] {
     return this.totalProducts;
@@ -86,47 +86,56 @@ export class addToCartService {
 
   addItemOfDescription(id: number) {
     let item = this.productService.productList.find(ob => ob.id === id);
-    if (this.totalProducts.indexOf(item) < 0) {
+    if (this.selectedItems.indexOf(item) < 0) {
       let itemIndex = this.selectedItems.indexOf(item);
-      this.totalProducts.splice(itemIndex, 1);
-      this.totalProducts.push(item)
+      this.selectedItems.splice(itemIndex, 1);
+      this.selectedItems.push(item)
     }
 
   }
 
   addMensItemOfDescription(id: number) {
     let item = this.mensProductList.mensProductList.find(ob => ob.id === id);
-    if (this.totalProducts.indexOf(item) < 0) {
+    if (this.selectedItems.indexOf(item) < 0) {
       let itemIndex = this.selectedItems.indexOf(item);
-      this.totalProducts.splice(itemIndex, 1);
-      this.totalProducts.push(item)
+      this.selectedItems.splice(itemIndex, 1);
+      this.selectedItems.push(item)
     }
   }
 
   addWomensItemOfDescription(id: number) {
     let item = this.womensProductList.womensProductList.find(ob => ob.id === id);
-    if (this.totalProducts.indexOf(item) < 0) {
+    if (this.selectedItems.indexOf(item) < 0) {
       let itemIndex = this.selectedItems.indexOf(item);
-      this.totalProducts.splice(itemIndex, 1);
-      this.totalProducts.push(item)
+      this.selectedItems.splice(itemIndex, 1);
+      this.selectedItems.push(item)
     }
   }
 
   addElectronicsItemOfDescription(id: number) {
     let item = this.electronicsProductList.electronicsProductList.find(ob => ob.id === id);
-    if (this.totalProducts.indexOf(item) < 0) {
+    if (this.selectedItems.indexOf(item) < 0) {
       let itemIndex = this.selectedItems.indexOf(item);
-      this.totalProducts.splice(itemIndex, 1);
-      this.totalProducts.push(item)
+      this.selectedItems.splice(itemIndex, 1);
+      this.selectedItems.push(item)
     }
   }
 
   addGroceryItemOfDescription(id: number) {
     let item = this.groceryProductList.groceryProductList.find(ob => ob.id === id);
-    if (this.totalProducts.indexOf(item) < 0) {
+    if (this.selectedItems.indexOf(item) < 0) {
       let itemIndex = this.selectedItems.indexOf(item);
-      this.totalProducts.splice(itemIndex, 1);
-      this.totalProducts.push(item)
+      this.selectedItems.splice(itemIndex, 1);
+      this.selectedItems.push(item)
     }
   }
+
+  proceedFromCartToCheckoutPage(id: number) {
+    let item = this.totalProducts.find(ob => ob.id === id);
+    if (this.totalProducts.indexOf(item) < 0) {
+      this.totalProducts.push(item);
+    }
+  }
+
+  
 }

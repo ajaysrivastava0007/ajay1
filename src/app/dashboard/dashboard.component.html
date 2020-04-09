@@ -19,26 +19,43 @@
 </nav>
 <div class="bs-example">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
             <li data-target="#myCarousel" data-slide-to="3"></li>
-
+            <li data-target="#myCarousel" data-slide-to="4"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-                <img src="assets/images/clothes.jpg" alt="first Slide" style="width: 100%; height: 60vh; cursor: pointer; border:0; text-decoration:none; outline:none" routerLink="#" />
+                <img src="https://stcnt.starshiners.com/img/new/banner-final-sale-august-2019-4.gif" alt="first Slide"
+                    style="width: 100%; height: 60vh; cursor: pointer; border:0; text-decoration:none; outline:none"
+                    routerLink="#" />
             </div>
             <div class="carousel-item ">
-                <img src="assets/images/womenClothes.jfif" alt="second Slide" style="width: 100%; height: 60vh; cursor: pointer; border:0; text-decoration:none; outline:none" routerLink="#" />
+                <img src="https://i.gifer.com/YiGJ.gif" alt="first Slide"
+                    style="width: 100%; height: 60vh; cursor: pointer; border:0; text-decoration:none; outline:none"
+                    routerLink="#" />
             </div>
             <div class="carousel-item ">
-                <img src="assets/images/phones.jfif" alt="third Slide" style="width: 100%; height: 60vh; cursor: pointer; border:0; text-decoration:none; outline:none" routerLink="#" />
+                <img src="assets/images/clothes.jpg" alt="first Slide"
+                    style="width: 100%; height: 60vh; cursor: pointer; border:0; text-decoration:none; outline:none"
+                    routerLink="#" />
+            </div>
+            <!-- <div class="carousel-item ">
+                <img src="https://i.gifer.com/YiGJ.gif" alt="second Slide"
+                    style="width: 100%; height: 60vh; cursor: pointer; border:0; text-decoration:none; outline:none"
+                    routerLink="#" />
+            </div> -->
+            <div class="carousel-item ">
+                <img src="assets/images/phones.jfif" alt="third Slide"
+                    style="width: 100%; height: 60vh; cursor: pointer; border:0; text-decoration:none; outline:none"
+                    routerLink="#" />
             </div>
             <div class="carousel-item ">
-                <img src="assets/images/grocery.jfif" alt="fourth Slide" style="width: 100%; height: 60vh; cursor: pointer; border:0; text-decoration:none; outline:none" routerLink="#" />
+                <img src="assets/images/grocery.jfif" alt="fourth Slide"
+                    style="width: 100%; height: 60vh; cursor: pointer; border:0; text-decoration:none; outline:none"
+                    routerLink="#" />
             </div>
         </div>
         <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
@@ -55,27 +72,26 @@
     <hr />
 </div><br><br><br>
 <span *ngIf="products">
-  <span *ngFor="let prod of products">
-
-    <tr>
-      <div style="margin-left: 23%;" class="container-fluid">
-        <th>
-          <div class="card" id="productList" routerLink="/description"  (click)="sendItemToDescriptionPage(prod.id)">
-            <img class="card-img-top"  src="{{prod.image}}" alt="Card image">
-            <div class="card-body">
-              <h4 id="product-name" class="card-title"><b><u>{{prod.name}}</u></b></h4>
-              <h4 id="product-name" class="card-title"><b><u>{{prod.price | currency:'INR'}}</u></b></h4>
+    <span *ngFor="let prod of products">
+        <tr>
+            <div style="margin-left: 23%;" class="container-fluid">
+                <th>
+                    <div class="card" id="productList" routerLink="/description"
+                        (click)="sendItemToDescriptionPage(prod.id)">
+                        <img class="card-img-top" src="{{prod.image}}" alt="Card image">
+                        <div class="card-body">
+                            <h4 id="product-name" class="card-title"><b><u>{{prod.name}}</u></b></h4>
+                            <h4 id="product-name" class="card-title"><b><u>{{prod.price | currency:'INR'}}</u></b></h4>
+                        </div>
+                    </div><br>
+                    <button id="dealButton" class="btn btn-primary" class="btn btn-outline-primary"
+                        (click)="sendItemToCart(prod.id)">
+                        Add To Cart
+                    </button><br><br><br><br><br>
+                </th>
             </div>
-          </div><br>
-          <button id="dealButton" class="btn btn-primary" class="btn btn-outline-primary"
-            (click)="sendItemToCart(prod.id)">
-            Add To Cart
-          </button><br><br><br><br><br>
-        </th>
-      </div>
-    </tr>
-
-  </span>
+        </tr>
+    </span>
 </span>
 <br><br>
 
