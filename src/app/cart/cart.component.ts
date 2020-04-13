@@ -22,10 +22,8 @@ export class CartComponent implements OnInit {
     private homePageProducts: ProductServiceService) { }
 
   public cartTotal = 0;
-  public initialGst=18;
   public gst = 0;
-  // public deliveryFee = 0;
-  // public deliveryFee1 = 40;
+  public count = 1;
   getItemsForCart(): void {
     this.dashboardProduct = this.cartService.getSelectedItems()
   }
@@ -34,12 +32,27 @@ export class CartComponent implements OnInit {
     this.getItemsForCart();
     this.dashboardProduct.forEach(item => {
       this.cartTotal += (item.price)
-      // this.deliveryFee1 +=  this.deliveryFee1
       this.gst = this.cartTotal + this.cartTotal * (8 / 100);
-      // this.deliveryFee = this.cartTotal+40;
-      
     })
-    
+
+  }
+  addCount(id: number) {
+    this.count = this.count + 1;
+    this.dashboardProduct.forEach(item => {
+      this.cartTotal += (item.price)
+      this.gst = this.cartTotal + this.cartTotal * (8 / 100);
+    })
+  }
+
+  subtractCount(id: number) {
+    this.count = this.count - 1;
+    this.dashboardProduct.forEach(item => {
+      this.cartTotal -= (item.price)
+      this.gst = this.cartTotal + this.cartTotal * (8 / 100);
+    })
+    if (this.count == 0) {
+      this.cartService.removeHomePageItems(id)
+    }
   }
 
   removeItemFromCart(id: number): void {

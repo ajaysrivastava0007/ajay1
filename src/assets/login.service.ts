@@ -6,18 +6,7 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
 })
 export class LoginService {
 
-  token: string;
-  constructor() {
-    const user = JSON.parse(localStorage.getItem('key'));
-    if ( user ) {
-      this.token = user.accessToken;
-    }
-  
-   }
-
-
-  public loginStatus = 0;
-  
+  constructor() {}
 
   userProfile = new FormGroup({
     email: new FormControl("", [
@@ -35,11 +24,7 @@ export class LoginService {
   ngOnInit() {
 
   }
-
- 
-  setLoginStatus(status: number) {
-    this.loginStatus = status;
-  }
+  public checkLoginStatus: boolean = false  
 
   onSubmit() {
     for (let value = 0; value < localStorage.length; value++) {
@@ -51,16 +36,15 @@ export class LoginService {
       ) {
         console.log(localStorage.getItem(key), "logged in");
         window.location.href = "/dashboard";
-        // this.setLoginStatus(0);
+        this.checkLoginStatus = true;
       } else if (
         this.userProfile.value.email === "admin@cart.com" &&
         this.userProfile.value.password === "oneofakind"
       ) {
         console.log("logged in to inventory");
-        window.location.href = "/inventory";
-        // this.setLoginStatus(0);
+        window.location.href = "/inventory ";
       } else {
-        console.log("user not permitted or invalid credentials");
+       alert("user not permitted or invalid credentials");
 
       }
     }

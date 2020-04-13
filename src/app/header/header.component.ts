@@ -16,12 +16,15 @@ export class HeaderComponent implements OnInit {
   loginButton() {
 
     window.location.href = "/login"
-    this.login.setLoginStatus(1)
+    // this.login.setLoginStatus(1)
+    this.login.checkLoginStatus=true;
 
   }
 
   logoutButton() {
-    this.login.setLoginStatus(0);
+    window.location.href = "/login"
+    // this.login.setLoginStatus(0);
+    this.login.checkLoginStatus=false;
 
   }
 }

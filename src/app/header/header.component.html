@@ -1,10 +1,10 @@
 <div class="header">
     <img src="assets/images/webIcon.png" routerLink="/dashboard" style="width: 3%; margin-left: 2%; cursor: pointer;" />
     <input  id="search" type="search" placeholder="Search for products, brands and more" />
-    <span *ngIf="login.loginStatus===0" (click)="loginButton()">
+    <span *ngIf="login.checkLoginStatus == false" (click)="loginButton()">
         <input type="submit" class="btn" value="Login" id="loginButton" />
     </span>
-    <span *ngIf="login.loginStatus === 1" (click)="logoutButton()">
+    <span *ngIf="login.checkLoginStatus == true" (click)="logoutButton()">
         <input type="submit" class="btn" value="Logout" id="logoutButton" />
     </span>
     <button id="dropdown" class="btn  dropdown-toggle" data-toggle="dropdown">

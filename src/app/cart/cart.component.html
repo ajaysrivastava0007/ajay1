@@ -3,7 +3,7 @@
 <span *ngIf="dashboardProduct.length === 0">
     <span><img src="https://media.tenor.com/images/2322364e6a7be9406868eeefaaa8ddc0/tenor.gif" id="emptyCartImage">
         <div class="alert" class="alert alert-primary">
-            Your Cart Is Empty!!
+            &nbsp;&nbsp; Your Cart Is Empty!!
         </div>
     </span>
 </span>
@@ -13,7 +13,7 @@
         <hr>
         Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        {{cartTotal | currency:'INR' }}<br><br>
+        {{cartTotal | currency:'INR'}}<br><br>
         GST &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -34,6 +34,11 @@
                     <li id="productImage"><img src="{{prod.image}}" class="image"></li>
                     <li id="productPrice">
                         <p id="price">{{prod.price | currency:"INR"}}</p>
+                    </li>
+                    <li id="quantity">
+                        <button (click)="subtractCount(prod.id)">-</button>
+                        {{count}}
+                        <button (click)="addCount(prod.id)">+</button>
                     </li>
                 </ul>
             </div>

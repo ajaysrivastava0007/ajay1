@@ -4,9 +4,10 @@ h1 {
     color: white;
     height: 4.5%;
 }
-#emptyCartImage{
+
+#emptyCartImage {
     margin-left: 42%;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 .alert {
@@ -17,13 +18,20 @@ h1 {
 .productList {
     margin-left: 5%;
     width: 49%;
-    height: 38%;
+    height: 42%;
     border-style: outset;
 }
 
-#priceListing{
+#quantity {
+    margin-top: 2%;
+    list-style-type: none;
+    margin-left: 5%;
+}
+
+#priceListing {
     text-align: right;
 }
+
 #orderHeader {
     text-align: center;
     margin-top: 0;
@@ -108,13 +116,14 @@ h1 {
 .btn {
     /* float: right; */
     margin-left: 63%;
-    background-color:tomato;
+    background-color: tomato;
     color: white;
     margin-top: 1%;
     margin-bottom: 1%;
     width: 30%;
 }
-.placeOrder{
+
+.placeOrder {
     border-style: outset;
     width: 49%;
     margin-left: 5%;

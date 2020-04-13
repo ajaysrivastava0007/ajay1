@@ -16,17 +16,17 @@ export class RegisterComponent implements OnInit {
   public userRegistration = this.registerService.userRegistration;
 
  
-  DateValidate() {
-    let today = new Date();
-    var birthDate = new Date();
-    var age = today.getUTCFullYear() - birthDate.getUTCFullYear();
-    if (age < 18 && age > 50) {
-      return false;
-    } else {
-      return true;
-    }
+  // DateValidate() {
+  //   let today = new Date();
+  //   var birthDate = new Date();
+  //   var age = today.getUTCFullYear() - birthDate.getUTCFullYear();
+  //   if (age < 18 && age > 50) {
+  //     return false;
+  //   } else {
+  //     return true;
+  //   }
    
-  }
+  // }
 
   onSubmit() {
     let key = this.userRegistration.value.email;

@@ -1,75 +1,64 @@
-
-        <div class="main">
-           <div *ngIf="">
-               
-           </div> 
-            <div class="container">
-                <form [formGroup]="userRegistration">
-                    <h1>Fill The Details</h1>
-                    <br>
-                    <div class="form-group">
-                        <input type="text" class="form-control" formControlName="firstName"
-                            placeholder="Your First Name">
-                        <span *ngIf="!userRegistration.get('firstName').valid && 
+<div class="main">
+    <div class="container">
+        <form [formGroup]="userRegistration">
+            <h1>Fill The Details</h1>
+            <br>
+            <div class="form-group">
+                <input type="text" class="form-control" formControlName="firstName" placeholder="Your First Name">
+                <span *ngIf="!userRegistration.get('firstName').valid && 
                             userRegistration.get('firstName').dirty">Please Enter your Valid first Name</span>
-                        <br>
-                        <input type=" text" formControlName="lastName" class="form-control"
-                            placeholder="Your Last Name">
-                        <span *ngIf="!userRegistration.get('lastName').valid && 
+                <br>
+                <input type=" text" formControlName="lastName" class="form-control" placeholder="Your Last Name">
+                <span *ngIf="!userRegistration.get('lastName').valid && 
                             userRegistration.get('lastName').dirty">Please Enter your valid last Name</span>
-                        <br>
-                        <input type="text" formControlName="address" class="form-control"
-                            placeholder="Enter your address here">
-                        <span *ngIf="!userRegistration.get('address').valid && 
+                <br>
+                <input type="text" formControlName="address" class="form-control" placeholder="Enter your address here">
+                <span *ngIf="!userRegistration.get('address').valid && 
                            userRegistration.get('address').dirty">Please Enter your valid Address</span>
-                        <br>
-                        <input type="text" formControlName="phone" class="form-control"
-                            placeholder="Alternate Contact No.">
-                        <span *ngIf="!userRegistration.get('phone').valid && 
+                <br>
+                <input type="text" formControlName="phone" class="form-control" placeholder="Alternate Contact No.">
+                <span *ngIf="!userRegistration.get('phone').valid && 
                            userRegistration.get('phone').dirty">Please Enter your valid contact Number</span>
-                        <br>
-                        <h3>Address Type</h3>
-                        <div class="checkbox">
-                            <label><input type="radio" name="address" value="Home">Home</label>
-                        </div>
-                        <div class="checkbox">
-                            <label><input type="radio" name="address" value="Office">Office</label>
-                        </div>
-                        <div class="checkbox">
-                            <label><input type="radio" name="address" value="Others">Others</label>
-                        </div>
-                        <br>
-                        <h3>Select Payment Method</h3>
-                        <div class="checkbox">
-                            <label><input type="radio" name="payment" value="Home" disabled>UPI</label>
-                        </div>
-                        <div class="checkbox">
-                            <label><input type="radio" name="payment" value="Office" disabled>Paytm</label>
-                        </div>
-                        <div class="checkbox">
-                            <label><input type="radio" name="payment" value="COD">Cash On Delivery</label>
-                        </div>
-                        <div class="checkbox">
-                            <label><input type="radio" name="payment" value="Debit" disabled>Debit Card</label>
-                        </div>
-                        <div class="checkbox">
-                            <label><input type="radio" name="payment" value="Credit" disabled>Credit Card</label>
-                        </div>
-                        <br>
-                        <label for="Suggestion">
-                            <h3>Suggestion(if any)</h3>
-                        </label>
-                        <textarea class="form-control" rows="5" id="Suggestion"></textarea>
-                        <br>
-                        <div>
-                            <button id="submitButton" type="button" class="btn btn-primary"
-                                class="btn btn-outline-primary" (click)="onSubmit()">
-                                Submit</button>
-                        </div>
-                    </div>
-                </form>
+                <br>
+                <h3>Address Type</h3>
+                <div class="checkbox">
+                    <label><input type="radio" name="address" value="Home">Home</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="radio" name="address" value="Office">Office</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="radio" name="address" value="Others">Others</label>
+                </div>
+                <br>
+                <h3>Select Payment Method</h3>
+                <div class="checkbox">
+                    <label><input type="radio" name="payment" value="Home" disabled>UPI</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="radio" name="payment" value="Office" disabled>Paytm</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="radio" name="payment" value="COD">Cash On Delivery</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="radio" name="payment" value="Debit" disabled>Debit Card</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="radio" name="payment" value="Credit" disabled>Credit Card</label>
+                </div>
+                <br>
+                <label for="Suggestion">
+                    <h3>Suggestion(if any)</h3>
+                </label>
+                <textarea class="form-control" rows="5" id="Suggestion"></textarea>
+                <br>
+                <div>
+                    <button id="submitButton" type="button" class="btn btn-primary" class="btn btn-outline-primary"
+                        (click)="onSubmit()">
+                        Submit</button>
+                </div>
             </div>
-        </div>
-
-    
-    
+        </form>
+    </div>
+</div>
