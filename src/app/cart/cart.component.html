@@ -15,12 +15,13 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         {{cartTotal | currency:'INR'}}<br><br>
         GST &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         {{.08 | percent}}
         <hr>
-        Total Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{gst | currency:'INR'}}
+        Total Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;{{gst | currency:'INR'}}
     </span>
     <span *ngFor="let prod of dashboardProduct">
         <div class="productList">
@@ -40,19 +41,17 @@
                         {{count}}
                         <button (click)="addCount(prod.id)">+</button>
                     </li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li id="saveList"> <a class="save" (click)=sendItemToWishlist(prod.id)><b>Save for later</b></a>
+                    <li id="saveList"> <a class="save" (click)=sendItemToWishlist(prod.id)>
+                            <b>Save for later</b></a>
                     </li>
-                    <li id="removeList"> <a class="remove" (click)=removeItemFromCart(prod.id)><b>Remove</b></a>
+                    <li id="removeList"> <a class="remove" (click)=removeItemFromCart(prod.id)>
+                            <b>Remove</b></a>
                     </li>
                 </ul>
             </div>
         </div>
     </span>
     <div *ngIf="dashboardProduct.length>0" class="placeOrder">
-        <button class="btn" (click)="placeOrder()">Place Order</button>
+        <button class="btn" (click)="placeOrder()">PLACE ORDER</button>
     </div>
 </span>

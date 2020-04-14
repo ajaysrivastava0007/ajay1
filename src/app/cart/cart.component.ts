@@ -15,8 +15,7 @@ import { AddMensProductToCartService } from 'src/assets/add-mens-product-to-cart
 })
 export class CartComponent implements OnInit {
   dashboardProduct: Model[] = []
-  mensProductInCart: Model[] = []
-  totalProduct: Model[] = []
+  wishlist: Model[] = []
   constructor(private cartService: addToCartService,
     private mensProduct: AddMensProductToCartService,
     private homePageProducts: ProductServiceService) { }
@@ -60,6 +59,10 @@ export class CartComponent implements OnInit {
   }
 
   sendItemToWishlist(id: number) {
+    let item = this.cartService.totalProducts.find(ob => ob.id === id)
+  if(this.wishlist.indexOf(item) < 0){
+    this.wishlist.push(item);
+  }
     this.cartService.removeHomePageItems(id);
     alert("item saved");
   }

@@ -1,65 +1,69 @@
-.carousel{
-    background: #2f4357;
-    margin-top: 0;
-}
-.bs-example{
+
+.bs-example {
   margin-top: 0%;
 }
-.carousel-item{
-    text-align: center;
- }
-.deals{
-    width: 100%;
-}
-  
-h1{
-    margin-left: 3%;
-}
-#row{
-    width: 100%;
-    
-}
-#prodImage{
-    margin-left: 18%;
-    width: 13%; 
-    cursor: pointer;
-    border: 0;
-    text-decoration: none;
-    outline-style: none;
-    width: 70.5%;
-    margin-top: 3%;
-}
-  #dealButton{
-    /* background-color: rgb(250, 244, 244); */
-    /* color: rgb(14, 14, 10); */
-    margin-left: 35%;
-    outline-style: none;
-    margin-top: 2%;
-  }
 
-  #productList{
-   margin-left: 20%;  
-   margin-top: 3%;
-   background-color: rgb(205, 202, 207); 
-   cursor: pointer; 
-   outline-style: none;
+.carousel-item {
+  text-align: center;
 }
-#product-name{
+
+.deals {
+  width: 100%;
+}
+
+h1 {
+  margin-left: 3%;
+}
+
+#row {
+  width: 100%;
+}
+
+#prodImage {
+  margin-left: 18%;
+  width: 13%;
+  cursor: pointer;
+  border: 0;
+  text-decoration: none;
+  outline-style: none;
+  width: 70.5%;
+  margin-top: 3%;
+}
+
+#dealButton {
+  /* background-color: rgb(250, 244, 244); */
+  /* color: rgb(14, 14, 10); */
+  margin-left: 35%;
+  outline-style: none;
+  margin-top: 2%;
+}
+
+#productList {
+  margin-left: 20%;
+  margin-top: 3%;
+  background-color: rgb(205, 202, 207);
+  cursor: pointer;
+  outline-style: none;
+}
+
+#product-name {
   text-align: center;
   font-weight: 5%;
   color: #4f5253;
 }
-#men
-{
+
+#men {
   margin-left: 100%;
 }
-#women{
-  margin-left: 85%;
-}
-#electronics{
-  margin-left: 85%;
-}
-#grocery{
+
+#women {
   margin-left: 85%;
 }
 
+#electronics {
+  margin-left: 85%;
+}
+
+#grocery {
+  margin-left: 85%;
+}

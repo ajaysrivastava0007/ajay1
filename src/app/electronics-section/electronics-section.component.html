@@ -23,7 +23,7 @@
   <span *ngFor="let prod of electronicsList">
     <tr>
       <th>
-        <div class="card" id="productList" routerLink="/description" (click)="sendItemTiDescription(prod.id)">
+        <div class="card" id="productList" routerLink="/electronicsDescription" (click)="sendItemTiDescription(prod.id)">
           <img class="card-img-top" src="{{prod.image}}" alt="Card image">
           <div class="card-body">
             <h4 id="product-name" class="card-title"><b><u>{{prod.name}}</u></b></h4>

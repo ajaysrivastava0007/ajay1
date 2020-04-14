@@ -1,6 +1,7 @@
 <div class="header">
-    <img src="assets/images/webIcon.png" routerLink="/dashboard" style="width: 3%; margin-left: 2%; cursor: pointer;" />
-    <input  id="search" type="search" placeholder="Search for products, brands and more" />
+    <img src="assets/images/logo.png" routerLink="/dashboard"
+        style="width: 3%; margin-left: 2%; cursor: pointer; outline-style:none ;" />
+    <input id="search" type="search" placeholder="Search for products, brands and more" />
     <span *ngIf="login.checkLoginStatus == false" (click)="loginButton()">
         <input type="submit" class="btn" value="Login" id="loginButton" />
     </span>

@@ -21,6 +21,11 @@ import { HeaderComponent } from './header/header.component';
 import { ProductDescriptionComponent } from './product-description/product-description.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { OrderPlacedComponent } from './order-placed/order-placed.component';
+import { MensDescriptionComponent } from './mens-description/mens-description.component';
+import { WomensDescriptionComponent } from './womens-description/womens-description.component';
+import { ElectronicsDescriptionComponent } from './electronics-description/electronics-description.component';
+import { GroceryDescriptionComponent } from './grocery-description/grocery-description.component';
+import { SaveForLaterComponent } from './save-for-later/save-for-later.component';
 
 
 @NgModule({
@@ -41,6 +46,11 @@ import { OrderPlacedComponent } from './order-placed/order-placed.component';
     ProductDescriptionComponent,
     CheckoutComponent,
     OrderPlacedComponent,
+    MensDescriptionComponent,
+    WomensDescriptionComponent,
+    ElectronicsDescriptionComponent,
+    GroceryDescriptionComponent,
+    SaveForLaterComponent,
     
     
     

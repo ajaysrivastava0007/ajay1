@@ -20,6 +20,7 @@ export class addToCartService {
   selectedItems: Model[] = [];
 
   totalProducts: Model[] = [];
+  wishlist: Model[]=[]
 
   // allProducts() {
   //   for (let i = 0; i < this.productService.productList.length; i++) {
@@ -136,6 +137,13 @@ export class addToCartService {
       this.totalProducts.push(item);
     }
   }
+
+sendProductToWishlist(id: number){
+  let item = this.totalProducts.find(ob => ob.id === id)
+  if(this.wishlist.indexOf(item) < 0){
+    this.wishlist.push(item);
+  }
+}
 
 
 }
